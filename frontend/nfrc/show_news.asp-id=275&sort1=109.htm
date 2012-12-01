@@ -1,0 +1,554 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<title>资讯中心-广州东佳人事网</title>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : _$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : _$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<body>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" type="text/css" />
+
+
+
+<div id="header">
+    <div style="margin:auto; width:1000px; background:url(images/index_01.jpg); height:95px;">
+		<ul style="height:20px; width:980px; margin-top:68px; text-align:right;">
+			  <li>客服在线:<a href="tencent://Message/?Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" /></a><a href="tencent://Message/?Uin=109629307
+&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+		</ul>
+	
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li style="background:none"><a href="index.asp.htm" tppabs="http://www.djhr168.com/index.asp">网站首页</a></li>
+			<li><a href="about.asp.htm" tppabs="http://www.djhr168.com/about.asp" rel='dropmenu1'>关于我们</a></li>
+		<li><a href="biyue.asp.htm" tppabs="http://www.djhr168.com/biyue.asp"  rel='dropmenu3'>毕业生接收</a></li>
+
+	<li><a href="rencai.asp.htm" tppabs="http://www.djhr168.com/rencai.asp" rel='dropmenu2'>人才引进</a></li>
+		<li><a href="zhaogong.asp.htm" tppabs="http://www.djhr168.com/zhaogong.asp">招工入户</a></li>
+		<li><a href="teshe.asp.htm" tppabs="http://www.djhr168.com/teshe.asp">特色服务</a></li>
+		<li><a href="peixun.asp.htm" tppabs="http://www.djhr168.com/peixun.asp">教育培训</a></li>
+		<li><a href="dangan.asp.htm" tppabs="http://www.djhr168.com/dangan.asp">职称档案</a></li>
+		<li><a href="hangyue.asp.htm" tppabs="http://www.djhr168.com/hangyue.asp">行业资讯</a></li>
+	<li><a href="join.asp.htm" tppabs="http://www.djhr168.com/join.asp">联盟合作</a></li>	
+		<li><a href="zhaoxuan.asp.htm" tppabs="http://www.djhr168.com/zhaoxuan.asp">招贤纳才</a></li>
+		<li><a href="contact.asp.htm" tppabs="http://www.djhr168.com/contact.asp">联系我们</a></li>
+	  </ul>
+	</div>
+	
+	
+	
+	<div id="navimg" style="width:1000px;margin:auto">
+	</div>
+	<div style="margin:auto; width:1000px;">
+	
+<script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var swf_width=999;
+var swf_height=148;
+var files = "";
+var links = "";
+var texts = "";
+//这里设置调用标记
+linkarr[1] = "#";
+picarr[1]  = "11.jpg"/*tpa=http://www.djhr168.com/images/11.jpg*/;
+linkarr[2] = "#";
+picarr[2]  = "22.jpg"/*tpa=http://www.djhr168.com/images/22.jpg*/;
+
+for(i=1;i<picarr.length;i++){
+  if(files=="") files = picarr[i];
+  else files += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+  if(links=="") links = linkarr[i];
+  else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+  if(texts=="") texts = textarr[i];
+  else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/><param name="quality" value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_config=0xffffff|2|0x8CA2AD|60|0xffffff|0xff9900|0x000033|2|3|1|_blank">');  
+document.write('<embed src="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/ wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+</script>	
+	
+	</div>
+	<div style=" margin-top:5px;margin:auto; width:1000px;"><img src="index_05.jpg" tppabs="http://www.djhr168.com/images/index_05.jpg" width="999" height="33" alt=""></div>
+  </div>
+<div id="main" >
+    <script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : _$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : _$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<div id="left">
+	  <div><img src="index_06.jpg" tppabs="http://www.djhr168.com/images/index_06.jpg" width="241" height="35" alt=""></div>
+	  <div id="product">
+	    <ul>
+		  <li>
+		  <marquee behavior="scroll" direction="up" onmouseover="stop()" onmouseout="start()" scrollamount="2" style="margin:0px; padding:0px; height:320px"> <P><FONT color=#003366><FONT size=4>&nbsp;&nbsp;&nbsp; 因业务壮大，我公司已搬至210室办公，来访的客户请移步210室。</FONT></FONT></P>
+<P><FONT color=#003366 size=4>&nbsp;&nbsp;&nbsp; </FONT><FONT color=#003366><FONT size=4><STRONG><FONT color=#0000ff><FONT face=黑体 size=3>无需预付款，无需押金，先办理后收费，放心服务！</FONT><BR></FONT></STRONG>&nbsp;&nbsp;&nbsp; </FONT><FONT size=4>欢迎光临广州东佳人事网，为您提供优质的服务，您的问题我们将会给出专业的解决方案！</FONT></FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp; 统招大专中级职称或统招本科有学位35岁以下人士<FONT color=#0000ff>无需广州社保</FONT>也可办理入户广州手续，已婚单调入户广州快速办理中，欢迎来电咨询办理。</FONT></P>
+<P><FONT color=#ff0000 size=4>&nbsp;&nbsp;&nbsp;&nbsp; </FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp;</FONT></P></marquee></li>
+		</ul>
+	  </div>
+	  <div><img src="index_18.jpg" tppabs="http://www.djhr168.com/images/index_18.jpg" width="241" height="30" alt=""></div>
+	  <div id="contact">
+	    <ul>
+		  <li></li>
+		  <li>客服在线:<a href="tencent://Message/?Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" /></a><a href="tencent://Message/?Uin=109629307&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+
+		  <li style=" font-weight:bold">广州东佳人事网</li>
+		  <li>电话:020-28963479/22093611</li>
+		  <li>手机:13632403496</li>
+		  <li>QQ:109629307</li>
+		  <li>邮箱:109629307@qq.com</li>
+		  <li>地址:广州市天河区中山大道西787号</li>
+		  <li>裕丰商业中心210室</li>
+		</ul>
+  </div>
+</div>
+
+    <div id="right">
+      <div style="margin-top:5px;background:url(images/xiu.jpg) no-repeat; width:741px; height:32px;">
+      <table width="211" height="29" border="0">
+        <tr>
+          <td align="center"><font color="#FFFFFF" style="letter-spacing:5px;font-weight:bold; font-size:14px;">
+		  特色服务
+		  
+		  </font></td>
+        </tr>
+      </table>
+    </div>
+		<div id="i_product">
+		  <div id="i_product_content" style="line-height:22px;">
+		    
+			<DIV id=htmlbody_id class=htmlbody_css>
+<P align=center><B>第一部分 劳务派遣的定义</B></P>
+<P><B>一、劳务派遣：</B></P>
+<P>劳务派遣又称人才派遣、人才租赁、劳动派遣、劳动力派遣、劳动力租赁，是指劳动者和劳务派遣单位签署劳动合同，劳务派遣单位通过和用工单位签署劳务派遣协议，向用工单位输送劳动者的一种用工方式。劳务派遣的最显著特征是劳动力的雇佣和使用分离——俗称“管人不用人，用人不管人”或称“有劳动没关系，有关系没劳动”。</P>
+<P align=center><B></B></P>
+<P><B>二、劳务派遣的分类： </B></P>
+<P><B>1</B><B>、转移派遣：</B>将现有企业员工关系转移到巨潮<FONT size=+0><FONT size=+0>公</FONT>司</FONT>，巨潮<FONT size=+0><FONT size=+0>公</FONT>司</FONT>负责后期事务性管理工作。<B></B></P>
+<P><B>2</B><B>、全程派遣：</B>用工单位提出招聘要求，巨潮<FONT size=+0><FONT size=+0>公</FONT>司</FONT>负责实施，将招聘到的人员派遣到用工单位。 <B></B></P>
+<P><B>3</B><B>、减员派遣：</B>企业为减少固定员工，增强企业面对风险时的组织应变能力和人力资源的弹性，实施转移派遣。（适用解决企业转制后原有人员的分流安置问题）<B></B></P>
+<P><B>4</B><B>、试用派遣：</B>用工单位在员工试用期间采用派遣的形式，目的是使用工单位在准确选才方面更具保障，免去由于选拔和测试产生的误差风险，有效降低人事成本。<B></B></P>
+<P><B>5</B><B>、项目派遣：</B>用工单位为完成某项工作而需要相关人员，项目完成后富余人员结束派遣，由巨潮<FONT size=+0><FONT size=+0>公</FONT>司</FONT>办理解除劳动关系等手续，为企业解决“用一阵子，养一辈子”的难题，增强企业季节性、阶段性用工的灵活性。<B></B></P>
+<P align=center><B>第二部分 劳务派遣的好处</B></P>
+<P align=left>近年来，劳务派遣在我国人力资源市场发展迅速，大型外资企业普遍采纳应用，其优势在于：</P>
+<P><B>一、用工方式灵活：</B>《劳动合同法》规定诸多企业应当与劳动者签定无固定期限劳动合同，如连续签定两次固定期限合同应当转为无固定期限合同，劳务派遣是解决这一问题有效方式。劳务派遣还可以解决季节性用工、短期临时性用工、非全日制用工或承包等用工矛盾。</P>
+<P><B>二、降低招聘费用：</B>企业将所有招聘事宜交由巨潮<FONT size=+0><FONT size=+0>公</FONT>司</FONT>，节省人力、广告费用等支出。</P>
+<P><B>三、减少人员储备：</B>企业采用储备人员来应对快速变化的人力资源市场，增加用人成本。巨潮<FONT size=+0><FONT size=+0>公</FONT>司</FONT>对于满足企业因不可预见的生产波动引起的临时性用工需求，极大地降低人工成本。</P>
+<P><B>四、节省人工成本：</B>劳务派遣人员的工资待遇可随行就市，用工单位可根据劳动力市场工资指导价位，协商劳务人员的工资，节省工资性人工成本。</P>
+<P><B>五、降低管理成本：</B>采取劳务派遣的用工方式减少很多琐碎的事务性工作，企业HR部门更专注于战略、核心领域。</P>
+<P><B>六、进行员工筛选：</B>试用派遣可避免招进不合格人员，降低离职成本。</P>
+<P><B>七、降低社保费用：</B>巨潮<FONT size=+0><FONT size=+0>公</FONT>司</FONT>根据企业需求选用更廉价的社保方案。</P>
+<P><B>八、规避劳动争议：</B>用工单位与劳动者“有劳动无关系”，降低了劳动争议的风险。</P>
+<P align=center><B>第三部分 项目服务与管理</B></P>
+<P>在与企业签订劳务派遣协议后，巨潮<FONT size=+0><FONT size=+0>公</FONT>司</FONT>将与企业共同对派遣员工实施管理，主要分担HR部门的事务性工作： </P>
+<P><B>工作内容分配表</B></P>
+<P>
+<TABLE border=1 cellSpacing=0 cellPadding=0>
+<TBODY>
+<TR>
+<TD width=262 colSpan=2>
+<P align=center><B>工作内容</B></P></TD>
+<TD width=185>
+<P align=center><B>用人单位（巨潮）</B></P></TD>
+<TD width=185>
+<P align=center><B>用工单位（企业）</B></P></TD></TR>
+<TR>
+<TD rowSpan=6 width=77>
+<P align=center>劳动关系</P></TD>
+<TD width=185>
+<P>员工的招聘</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0033>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center>√</P></TD></TR>
+<TR>
+<TD width=185>
+<P>劳动合同签订与管理</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>新入职员工用品发放</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>员工档案的建立</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>员工入职体检安排</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>员工离职手续办理</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD rowSpan=4 width=77>
+<P align=center>员工培训</P></TD>
+<TD width=185>
+<P>入职前人事培训</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>岗前技术培训</P></TD>
+<TD vAlign=top width=185>
+<P align=center>√</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD></TR>
+<TR>
+<TD width=185>
+<P>工作中的指导</P></TD>
+<TD vAlign=top width=185>
+<P align=center>√</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD></TR>
+<TR>
+<TD width=185>
+<P><FONT size=+0><FONT size=+0>公</FONT>司</FONT>规章制度培训</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center>√</P></TD></TR>
+<TR>
+<TD rowSpan=6 width=77>
+<P align=center>社会保险</P></TD>
+<TD width=185>
+<P>代扣个人保险</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>商业保险手续办理</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>员工异地就医办理</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>住房<FONT size=+0>公</FONT>积金缴纳提取</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>员工医保卡的发放</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>转移、缴纳社保</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD rowSpan=4 width=77>
+<P align=center>员工薪资</P></TD>
+<TD width=185>
+<P>员工考勤、考评、奖惩</P></TD>
+<TD vAlign=top width=185>
+<P align=center>√</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD></TR>
+<TR>
+<TD width=185>
+<P>员工薪资报表</P></TD>
+<TD vAlign=top width=185>
+<P align=center>√</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD></TR>
+<TR>
+<TD width=185>
+<P>员工工资条的发放</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185 noWrap>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>员工工资的发放</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD rowSpan=5 width=77>
+<P align=center>客服处理</P></TD>
+<TD width=185>
+<P>工伤处理</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center>√</P></TD></TR>
+<TR>
+<TD width=185>
+<P>商保理赔手续办理</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>生育保险手续办理</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center></P></TD></TR>
+<TR>
+<TD width=185>
+<P>员工关系管理</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center>√</P></TD></TR>
+<TR>
+<TD width=185>
+<P>劳动争议处理</P></TD>
+<TD vAlign=top width=185>
+<P align=center><FONT color=#ff0066>√</FONT></P></TD>
+<TD vAlign=top width=185>
+<P align=center>√</P></TD></TR></TBODY></TABLE></P>
+<P align=center><B></B></P>
+<P align=center><B>第四部分 客户服务与关系维护</B></P>
+<P><B>一、组织保障。</B>巨潮<FONT size=+0><FONT size=+0>公</FONT>司</FONT>设有招聘部、项目部、社保组、财务部、法务中心等部门实施项目服务，项目部设有项目经理、主管、驻厂专员实施分级管理，并有客服中心跟踪客户满意度。</P>
+<P><B>二、风险防范</B></P>
+<P>1、制度、流程保障。巨潮<FONT size=+0><FONT size=+0>公</FONT>司</FONT>根据国家法律法规规定，结合多年的操作经验，制订针对外派员工的管理制度、服务流程和协议合同文本，防范操作分险。</P>
+<P>2、专家支持。<FONT size=+0><FONT size=+0>公</FONT>司</FONT>聘请法律顾问及相关的机构作为顾问团做保障，应对可能出现的劳动争议或其他法律诉讼事件。</P>
+<P><B>三、客户关系维护</B></P>
+<P>1、为规范服务流程，改进服务质量，我们定期进行客户满意度调查，针对问题进行书面信息反馈，并积极采取有效措施改进、完善。</P>
+<P>2、我司积极协助进行绩效考核、薪酬制定，并开通咨询电话、电子邮箱，长期面向贵<FONT size=+0><FONT size=+0>公</FONT>司</FONT>提供劳动、人事政策、法律法规的解释工作。</P>
+<P align=center><B>第五部分 员工管理与服务</B></P>
+<P>一、入职前的教育和动员，让员工认同劳务派遣的形式，并要求员工学习和融入用人单位、用工单位的文化与环境。<BR>二、引导外派员工理解和认识存在的差异，保持良好心态；</P>
+<P>三、建立完善的管理制度，员工必须严格遵照执行。与用工单位合作制订针对外派员工切实可行的管理制度，如《员工手册》、《员工入职须知》等。</P>
+<P>四、<FONT size=+0><FONT size=+0>公</FONT>司</FONT>成立工会组织，定期开展活动，吸收、培养新成员，强化员工认同感与归属感。</P>
+<P>五、驻厂人员及时收集外派员工的信息，了解思想动态，做好沟通、协调与反</P>
+<P><B>第六部分 承 诺</B></P>
+<P><B>一、保证服务质量。</B>严格执行双方约定的制度、流程，以保证服务质量。</P>
+<P><B>二、保证服务规范。</B><FONT size=+0><FONT size=+0>公</FONT>司</FONT>将严格按照规范化的管理流程，及时处理、解决有关事务。</P>
+<P><B>三、保证员工利益。</B>及时、准确地申报有关社会保险，及时支付员工工伤、医疗、生育等保险待遇，按时、足额发放员工工资。</P>
+<P><B>四、负责工伤处理。</B>依照工伤处理流程，主动、及时处理工伤事故。</P>
+<P><B>五、妥善处理退工。</B>按照国家及双方派遣协议有关规定的退工，我<FONT size=+0><FONT size=+0>公</FONT>司</FONT>负责接受并妥善处理。</P></DIV>
+		  </div>
+		</div>
+         <div><img src="index_20.jpg" tppabs="http://www.djhr168.com/images/index_20.jpg" width="741" height="11" alt=""></div>
+  </div>	
+</div>
+  
+    
+
+
+<TABLE style=" margin-top:8px;"; cellSpacing=0 cellPadding=0 width=1000 align=center border=0>
+  <TR>
+    <TD>
+<DIV id=div1 style="OVERFLOW: hidden; WIDTH: 100%; COLOR: #ffffff">
+      <TABLE cellSpacing=0 cellPadding=0 align=left border=0 cellspace="0">
+        <TR>
+          <TD id=td1 vAlign=top>
+		  <table width="1710" height="50"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+			
+              <td width="171"><a href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryGraduateApply.aspx" target="_blank"><img src="20111117113941254.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117113941254.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryPersonIntroduce.aspx" target="_blank"><img src="20111117114212262.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117114212262.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.ahelp.cn/" target="_blank"><img src="20120515094809140.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515094809140.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.mohrss.gov.cn/" target="_blank"><img src="20120515095246546.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515095246546.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.gdrst.gov.cn/" target="_blank"><img src="20120515095550448.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515095550448.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.chsi.com.cn/xlcx/" target="_blank"><img src="20111117114430973.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117114430973.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://gzsc.gzlm.net/" target="_blank"><img src="20120515100612872.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515100612872.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://gzcsh.gzmz.gov.cn/" target="_blank"><img src="20120515134020340.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515134020340.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.cjob.gov.cn/cjob/f_index.do" target="_blank"><img src="20120515100857942.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515100857942.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.newjobs.com.cn/jyzd/index.html" target="_blank"><img src="20120515101023864.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515101023864.jpg" height="46" border="0"></a></td>
+			
+            </tr>
+          </table>
+		  </TD>
+<TD id=td2 vAlign=top> </TD></TR></TABLE>
+</DIV>
+<SCRIPT language="javascript">
+var n=5
+//数值越大图片滚动的越快
+td2.innerHTML=td1.innerHTML
+var Mycheck;
+function move()
+{
+	if(td2.offsetWidth-div1.scrollLeft<=0)
+		div1.scrollLeft-=td1.offsetWidth
+	else
+	{div1.scrollLeft++}
+    Mycheck=setTimeout(move,n)
+}
+div1.onmouseover=function() {clearTimeout(Mycheck)}
+div1.onmouseout=function() {Mycheck=setTimeout(move,n)}
+move();
+</SCRIPT>
+</TD>
+</TR></TABLE>
+<div id="foot">
+  <div style="height:6px; overflow:hidden;background-color:#535353"></div>
+    <ul>
+	  <li></li>
+	  <li>版权所有2010-2015 广州东佳企业管理咨询有限公司 备案号:粤ICP备11095050号 技术支持:<a href="http://www.oyky.net/" target="_blank">广州网站建设</a></li>
+	</ul>
+  </div>
+</body>
+</html>

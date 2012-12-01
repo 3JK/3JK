@@ -1,0 +1,195 @@
+/* CSS Document */
+
+
+body{ margin:0px; padding:0px; font-size:12px; background-color:#E7E7E7}
+p{margin:0px; padding:0px;}
+ul{margin:0px; padding:0px; list-style-type:none;}
+
+a{ text-decoration:none; color:#000000;}
+
+
+
+#header{
+ width:100%; height:330px; margin:auto; background:url("background_2011.gif")/*tpa=http://www.djhr168.com/images/background_2011.gif*/ 0px 100px repeat-x}
+ 
+ 
+#header #nav{
+ height:33px; background:url("nav.jpg")/*tpa=http://www.djhr168.com/images/nav.jpg*/ repeat-x; width:1000px;margin:auto; }
+
+
+#header #nav ul li{
+ float:left; line-height:33px; width:83px; font-size:14px; 
+ text-align:center; background:url("nav1.jpg")/*tpa=http://www.djhr168.com/images/nav1.jpg*/ 0px center no-repeat;}
+
+#header #nav ul li a{
+ color:#FFFFFF; font-weight:bold;}
+ 
+ 
+#header #navimg{
+ height:22px; background:url("nav3.jpg")/*tpa=http://www.djhr168.com/images/nav3.jpg*/;} 
+ 
+#main{
+ width:1000px;height:auto!important;height:686px;min-height:686px;   margin:auto; background-color:#FFFFFF}
+ 
+#main #left{
+ width:241px; height:686px; float:left; }
+ 
+ #left #product{
+  height:340px; background:url("leftproduct.jpg")/*tpa=http://www.djhr168.com/images/leftproduct.jpg*/ repeat-y;}
+
+ #left #product #product_type{
+ width:194px; height:328px; background-color:#EEEEEE; margin:auto;
+ position:relative; top:6px;}
+ 
+#product_type .product_title{
+ height:26px;}
+
+#product ul li{
+ height:25px; line-height:25px;
+ width:224px; float:left; margin-left:13px; display:inline; margin-top:3px; text-indent:1px; margin-top:2px; color:#FFFFFF}
+
+ 
+#left #contact{
+ height:280px; background:url("index_19.jpg")/*tpa=http://www.djhr168.com/images/index_19.jpg*/ no-repeat} 
+ 
+#left #contact ul li{
+ height:22px; line-height:22px; text-indent:18px;} 
+
+#main #right{
+ width:753px; min-height:686px; height:auto!important; height:686px; background-color:#FFFFFF; float:left; margin-left:5px;}
+ 
+#right .news{
+ height:170px; background:url("inews.jpg")/*tpa=http://www.djhr168.com/images/inews.jpg*/ repeat-y;}
+
+
+.news #yewu{
+ width:370px;height:200px; float:left;}
+
+.news #yewu #s{
+ width:370px; margin: 12px auto;}
+
+.news #yewu #s ul li{
+ width:160px; float:left; height:30px; line-height:30px; text-align:center;
+ background:url("small03.gif")/*tpa=http://www.djhr168.com/images/small03.gif*/ 18px center no-repeat}
+
+.news #yewu #s ul li a:hover{
+ color:#ffffff; text-decoration:underline;}
+
+ 
+.news .dongtai{
+ width:370px;height:160px; float:left; border-left: 1px solid #A8A8A8}
+ 
+ 
+.news .dongtai ul li{
+ height:22px; line-height:22px; text-indent:54px;
+ background:url("IMG_1.gif")/*tpa=http://www.djhr168.com/images/IMG_1.gif*/ 28px center no-repeat}
+ 
+.news .dongtai ul li a:hover{
+ color:#FF0000; text-decoration:underline;}
+
+#i_product{
+  min-height:600px; height:auto!important;height:600px; width:741px; background:url("product1.jpg")/*tpa=http://www.djhr168.com/images/product1.jpg*/ repeat-y;}
+ 
+#i_product #i_product_content{
+ width:721px; margin:auto; min-height:388px; height:auto!important; height:388px;}
+ 
+#i_product_content #i_product_title{
+ width:174px; height:180px; border:  1px dashed #CCCCCC;margin-top:12px; float:left;  margin-left:3px;}
+
+#i_product_content #i_product_title ul li{
+ text-align:center;}
+
+ 
+#link{
+ width:1000px; height:48px;clear:both; margin: 8px auto; }
+
+#link ul li{
+ width:158px; height:46px; float:left; margin-left:3px; border:1px solid #010101}
+
+
+#foot{
+ width:1000px; height:80px; margin: 8px auto; background-color:#CECECE; clear:both}
+
+#foot ul li{
+ height:30px; line-height:30px; text-align:center;}
+ 
+ 
+ 
+ 
+ 
+/*---------------------------------------------------------------------------------------------about.asp*/
+
+#about_imga{
+ width:741px; margin:auto; text-align:center}
+ 
+ /*-----------------------------------------------------------------------------------------------news.asp*/
+
+#n_news{
+ height:30px;}
+ 
+#n_news ul li{
+ line-height:30px; float:left;}
+
+#n_news ul li a:hover{
+ color:#FF0000; text-decoration:underline;}
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.dropMenu {
+	position:absolute;
+	top: 0;
+	z-index:100;
+	width: 110px;
+	visibility: hidden;
+	
+	
+/*  	filter: progid:DXImageTransform.Microsoft.Shadow(color=#000, direction=135, strength=4);
+*/	margin-top: -1px;
+	margin-left:-2px;
+	border: 1px solid #4D5B66;
+	border-top: 0px solid #3CA2DC;
+	background-color:#B68690;
+	/*background:url(../imagess/mmenubg.gif);*/
+	padding-top:6px;
+	padding-bottom:6px;
+	filter: Alpha(Opacity=85);
+}
+
+.dropMenu li {
+	margin-top:2px;
+	margin-bottom:4px;
+	padding-left:6px;
+}
+.dropMenu li a {
+	width: 92%;
+	display: block;
+	text-align:left;
+	color: black;
+	padding: 4px 0 4px 0px;
+	color:#FFFFFF;
+	border-bottom: 1px dashed #ffffff;
+}
+.dropMenu+li a{
+border-top:none;
+}
+* html .dropMenu a {
+	width: 100%;
+	color:#FFFFFF;
+}
+.dropMenu a:hover {
+	text-decoration: underline;
+	color:#F09C42;
+}
+
+.hdo{
+width:100%;
+height:auto;
+display:block;
+overflow:hidden;
+}
+
+/*--------------------------------------------------------------------------product.asp---------*/
+
+.product{
+ width:160px; height:180px; margin-top:12px; margin-left:12px; float:left}

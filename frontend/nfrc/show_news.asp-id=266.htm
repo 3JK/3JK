@@ -1,0 +1,815 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<title>资讯中心-广州东佳人事网</title>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" 
+
+type="text/css" />
+</head>
+<script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval
+
+("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox
+
+必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : 
+
+_$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : 
+
+_$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<body>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" 
+
+type="text/css" />
+
+
+
+<div id="header">
+    <div style="margin:auto; width:1000px; background:url(images/index_01.jpg); 
+
+height:95px;">
+		<ul style="height:20px; width:980px; margin-top:68px; text-align:right;">
+			  <li>客服在线:<a href="tencent://Message/?
+
+Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给
+
+我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" 
+
+/></a><a href="tencent://Message/?Uin=109629307
+&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" 
+
+src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+		</ul>
+	
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li style="background:none"><a href="index.asp.htm" 
+
+tppabs="http://www.djhr168.com/index.asp">网站首页</a></li>
+			<li><a href="about.asp.htm" 
+
+tppabs="http://www.djhr168.com/about.asp" rel='dropmenu1'>关于我们</a></li>
+		<li><a href="biyue.asp.htm" tppabs="http://www.djhr168.com/biyue.asp"  
+
+rel='dropmenu3'>毕业生接收</a></li>
+
+	<li><a href="rencai.asp.htm" tppabs="http://www.djhr168.com/rencai.asp" 
+
+rel='dropmenu2'>人才引进</a></li>
+		<li><a href="zhaogong.asp.htm" 
+
+tppabs="http://www.djhr168.com/zhaogong.asp">招工入户</a></li>
+		<li><a href="teshe.asp.htm" tppabs="http://www.djhr168.com/teshe.asp">特色
+
+服务</a></li>
+		<li><a href="peixun.asp.htm" tppabs="http://www.djhr168.com/peixun.asp">教
+
+育培训</a></li>
+		<li><a href="dangan.asp.htm" tppabs="http://www.djhr168.com/dangan.asp">职
+
+称档案</a></li>
+		<li><a href="hangyue.asp.htm" tppabs="http://www.djhr168.com/hangyue.asp">
+
+行业资讯</a></li>
+	<li><a href="join.asp.htm" tppabs="http://www.djhr168.com/join.asp">联盟合作
+
+</a></li>	
+		<li><a href="zhaoxuan.asp.htm" 
+
+tppabs="http://www.djhr168.com/zhaoxuan.asp">招贤纳才</a></li>
+		<li><a href="contact.asp.htm" tppabs="http://www.djhr168.com/contact.asp">
+
+联系我们</a></li>
+	  </ul>
+	</div>
+	
+	
+	
+	<div id="navimg" style="width:1000px;margin:auto">
+	</div>
+	<div style="margin:auto; width:1000px;">
+	
+<script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var swf_width=999;
+var swf_height=148;
+var files = "";
+var links = "";
+var texts = "";
+//这里设置调用标记
+linkarr[1] = "#";
+picarr[1]  = "11.jpg"/*tpa=http://www.djhr168.com/images/11.jpg*/;
+linkarr[2] = "#";
+picarr[2]  = "22.jpg"/*tpa=http://www.djhr168.com/images/22.jpg*/;
+
+for(i=1;i<picarr.length;i++){
+  if(files=="") files = picarr[i];
+  else files += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+  if(links=="") links = linkarr[i];
+  else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+  if(texts=="") texts = textarr[i];
+  else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+
+codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0
+
+,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" 
+
+value="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/><param name="quality" 
+
+value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" 
+
+value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_config=0xffffff|2|0x8CA2AD|60|0xf
+
+fffff|0xff9900|0x000033|2|3|1|_blank">');  
+document.write('<embed src="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/ 
+
+wmode="opaque" 
+
+FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" 
+
+quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-
+
+shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); 
+
+document.write('</object>'); 
+</script>	
+	
+	</div>
+	<div style=" margin-top:5px;margin:auto; width:1000px;"><img src="index_05.jpg" 
+
+tppabs="http://www.djhr168.com/images/index_05.jpg" width="999" height="33" alt=""></div>
+  </div>
+<div id="main" >
+    <script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval
+
+("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox
+
+必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : 
+
+_$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : 
+
+_$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<div id="left">
+	  <div><img src="index_06.jpg" tppabs="http://www.djhr168.com/images/index_06.jpg" 
+
+width="241" height="35" alt=""></div>
+	  <div id="product">
+	    <ul>
+		  <li>
+		  <marquee behavior="scroll" direction="up" onmouseover="stop()" 
+
+onmouseout="start()" scrollamount="2" style="margin:0px; padding:0px; height:320px"> 
+
+<P><FONT color=#003366><FONT size=4>&nbsp;&nbsp;&nbsp; 因业务壮大，我公司已搬至210室办公，
+
+来访的客户请移步210室。</FONT></FONT></P>
+<P><FONT color=#003366 size=4>&nbsp;&nbsp;&nbsp; </FONT><FONT color=#003366><FONT 
+
+size=4><STRONG><FONT color=#0000ff><FONT face=黑体 size=3>无需预付款，无需押金，先办理后收
+
+费，放心服务！</FONT><BR></FONT></STRONG>&nbsp;&nbsp;&nbsp; </FONT><FONT size=4>欢迎光临广
+
+州东佳人事网，为您提供优质的服务，您的问题我们将会给出专业的解决方案！</FONT></FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp; 统招大专中级职称或统招本科有学位35岁以下人
+
+士<FONT color=#0000ff>无需广州社保</FONT>也可办理入户广州手续，已婚单调入户广州快速办理中，
+
+欢迎来电咨询办理。</FONT></P>
+<P><FONT color=#ff0000 size=4>&nbsp;&nbsp;&nbsp;&nbsp; </FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp;</FONT></P></marquee></li>
+		</ul>
+	  </div>
+	  <div><img src="index_18.jpg" tppabs="http://www.djhr168.com/images/index_18.jpg" 
+
+width="241" height="30" alt=""></div>
+	  <div id="contact">
+	    <ul>
+		  <li></li>
+		  <li>客服在线:<a href="tencent://Message/?
+
+Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给
+
+我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" 
+
+/></a><a href="tencent://Message/?Uin=109629307&amp;websiteName=q-
+
+zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-
+
+16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+
+		  <li style=" font-weight:bold">广州东佳人事网</li>
+		  <li>电话:020-28963479/22093611</li>
+		  <li>手机:13632403496</li>
+		  <li>QQ:109629307</li>
+		  <li>邮箱:109629307@qq.com</li>
+		  <li>地址:广州市天河区中山大道西787号</li>
+		  <li>裕丰商业中心210室</li>
+		</ul>
+  </div>
+</div>
+
+    <div id="right">
+      <div style="margin-top:5px;background:url(images/xiu.jpg) no-repeat; width:741px; 
+
+height:32px;">
+      <table width="211" height="29" border="0">
+        <tr>
+          <td align="center"><font color="#FFFFFF" style="letter-spacing:5px;font-
+
+weight:bold; font-size:14px;">
+		  
+		  
+		  </font></td>
+        </tr>
+      </table>
+    </div>
+		<div id="i_product">
+		  <div id="i_product_content" style="line-height:22px;">
+		    
+			<P><STRONG>调整就业（改派）毕业生入户广州办理流程</STRONG></P>
+<DIV class=Section0 style="LAYOUT-GRID:  15.6pt none">
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%; TEXT-ALIGN: 
+
+center"><SPAN style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" 
+
+/><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">一、</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">什么是改派，改派应如何办
+
+理？</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><BR></SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">&nbsp;&nbsp;&nbsp;&nbsp;毕业生的调整改派是指就业报到证已签发到接收单位，在改派期内（
+
+广东省内高校为毕业</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">2</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">年
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">内
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">），因特殊情
+
+况与原接收单位解除协议，申请回生源地就业或与新接收单位签订就业协议，由各级人事部门办理改派
+
+手续</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">。
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">（实际就是改
+
+报道证）。</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">二、</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">改派的</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">办理流程:</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">1、填表、申请接收函。
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; 
+
+mso-spacerun: 'yes'">填写大学生登记表并发给我，我会3-5个工作日把你弄好广州人事局的接受函。
+
+有广州接受单位的还要加收组织结构代码证的复印件(可发传真或者扫描件，如果一年内会离职或者不想
+
+和单位发生关系或者单位盖章等手续很麻烦可不提供单位，对办理没有影响）。</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">2、</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">拿改派申请表或者原报到证
+
+盖章。</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; 
+
+mso-spacerun: 'yes'">我</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">我中心</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">提供改派申请表，需原单位、原主管部门意见处盖章加注“同意”和时间，如果原单
+
+位所在人事局能够在报到证上备注栏上盖章写明同意改派往广州，可不要此表盖章。</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">3、</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">网上学历验证</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">。</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">&nbsp;&nbsp;&nbsp;&nbsp;
+
+登录</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">网址为
+
+</SPAN><SPAN><A 
+
+href="http://imgcache.qq.com/qzone/blogjumper.html#url=http://www.chsi.com.cn/xlcx/"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><FONT 
+
+color=#0000ff>http://www.chsi.com.cn/xlcx/</FONT></SPAN></A></SPAN><SPAN style="FONT-SIZE: 
+
+12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">并打印学历验证报告</SPAN><SPAN style="FONT
+
+-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">(当年内</SPAN><SPAN style="FONT-
+
+SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">改派</SPAN><SPAN style="FONT-SIZE: 
+
+12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">的学生不要提供）。</SPAN><SPAN style="FONT
+
+-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">4、</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">学校受理改派</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">。</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; 
+
+mso-spacerun: 'yes'">就将</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">将改派申请表（原单位已经盖好公章同意改派）</SPAN><SPAN style="FONT-SIZE: 
+
+12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">、</SPAN><SPAN style="FONT-SIZE: 12pt; 
+
+FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">新单位的接受函及原报到证</SPAN><SPAN style="FONT
+
+-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">交</SPAN><SPAN style="FONT-SIZE: 
+
+12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">学校就业指导中心报省教育厅审批，并办理派遣
+
+手续，重新迁转户口、档案</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">、党组织</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">关系等</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">。</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">5、</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">我中心</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">代办改派。</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; 
+
+mso-spacerun: 'yes'">如果学校不</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; 
+
+mso-spacerun: 'yes'">再</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">受理改派手续</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso
+
+-spacerun: 'yes'">且毕业学校是属于广东高校，</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-
+
+FAMILY: '宋体'; mso-spacerun: 'yes'">可</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '
+
+宋体'; mso-spacerun: 'yes'">将</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; 
+
+mso-spacerun: 'yes'">改派申请表（原单位已经盖好公章同意改派）</SPAN><SPAN style="FONT-SIZE: 
+
+12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">、</SPAN><SPAN style="FONT-SIZE: 12pt; 
+
+FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">新单位的接受函</SPAN><SPAN style="FONT-SIZE: 
+
+12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">、</SPAN><SPAN style="FONT-SIZE: 12pt; 
+
+FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">原报到证</SPAN><SPAN style="FONT-SIZE: 12pt; 
+
+FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">、学历验证报告，学历和学位证原件</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">交人才市场代办
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">改
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">派手续
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">但需向高教厅
+
+缴纳改派费，当年内</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">改派需交150元的改派费</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">，跨年度接受则需交300元改派费。</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-
+
+FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">6、</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">开户口迁移证。
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; 
+
+mso-spacerun: 'yes'">拿到改派后的报道证后再到你户口所在地去开户口迁移证和婚育证明。
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">7、转党组织关系。
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; 
+
+mso-spacerun: 'yes'">需要把党组织关系转移到我市场的，请开好党组织关系转移介绍信。
+
+</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">8、</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">来</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">我中心</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">报到和交费。</SPAN><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; 
+
+mso-spacerun: 'yes'">最后就拿报到证</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋
+
+体'; mso-spacerun: 'yes'">、</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">户口迁移证</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">、</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">婚育证明和毕业证</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">、</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">学位证原件</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'">、</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'">身
+
+份证复印件等报到材料来</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">我中心</SPAN><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-
+
+spacerun: 'yes'">报到，并签订人事代理合同和交费，此时就办理成功。</SPAN><SPAN style="FONT-
+
+SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P class=p0 style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0pt; LINE-HEIGHT: 150%"><SPAN 
+
+style="FONT-SIZE: 12pt; FONT-FAMILY: '宋体'; mso-spacerun: 
+
+'yes'"><o:p></o:p></SPAN></P></DIV>
+		  </div>
+		</div>
+         <div><img src="index_20.jpg" tppabs="http://www.djhr168.com/images/index_20.jpg" 
+
+width="741" height="11" alt=""></div>
+  </div>	
+</div>
+  
+    
+
+
+<TABLE style=" margin-top:8px;"; cellSpacing=0 cellPadding=0 width=1000 align=center 
+
+border=0>
+  <TR>
+    <TD>
+<DIV id=div1 style="OVERFLOW: hidden; WIDTH: 100%; COLOR: #ffffff">
+      <TABLE cellSpacing=0 cellPadding=0 align=left border=0 cellspace="0">
+        <TR>
+          <TD id=td1 vAlign=top>
+		  <table width="1710" height="50"  border="0" cellpadding="0" 
+
+cellspacing="0">
+            <tr>
+			
+              <td width="171"><a 
+
+href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryGraduateApply.aspx" 
+
+target="_blank"><img src="20111117113941254.jpg" 
+
+tppabs="http://www.djhr168.com/UploadFile/Links/20111117113941254.jpg" height="46" 
+
+border="0"></a></td>
+			
+              <td width="171"><a 
+
+href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryPersonIntroduce.aspx" 
+
+target="_blank"><img src="20111117114212262.jpg" 
+
+tppabs="http://www.djhr168.com/UploadFile/Links/20111117114212262.jpg" height="46" 
+
+border="0"></a></td>
+			
+              <td width="171"><a href="http://www.ahelp.cn/" target="_blank"><img 
+
+src="20120515094809140.jpg" 
+
+tppabs="http://www.djhr168.com/UploadFile/Links/20120515094809140.jpg" height="46" 
+
+border="0"></a></td>
+			
+              <td width="171"><a href="http://www.mohrss.gov.cn/" target="_blank"><img 
+
+src="20120515095246546.jpg" 
+
+tppabs="http://www.djhr168.com/UploadFile/Links/20120515095246546.jpg" height="46" 
+
+border="0"></a></td>
+			
+              <td width="171"><a href="http://www.gdrst.gov.cn/" target="_blank"><img 
+
+src="20120515095550448.jpg" 
+
+tppabs="http://www.djhr168.com/UploadFile/Links/20120515095550448.jpg" height="46" 
+
+border="0"></a></td>
+			
+              <td width="171"><a href="http://www.chsi.com.cn/xlcx/" target="_blank"><img 
+
+src="20111117114430973.jpg" 
+
+tppabs="http://www.djhr168.com/UploadFile/Links/20111117114430973.jpg" height="46" 
+
+border="0"></a></td>
+			
+              <td width="171"><a href="http://gzsc.gzlm.net/" target="_blank"><img 
+
+src="20120515100612872.jpg" 
+
+tppabs="http://www.djhr168.com/UploadFile/Links/20120515100612872.jpg" height="46" 
+
+border="0"></a></td>
+			
+              <td width="171"><a href="http://gzcsh.gzmz.gov.cn/" target="_blank"><img 
+
+src="20120515134020340.jpg" 
+
+tppabs="http://www.djhr168.com/UploadFile/Links/20120515134020340.jpg" height="46" 
+
+border="0"></a></td>
+			
+              <td width="171"><a href="http://www.cjob.gov.cn/cjob/f_index.do" 
+
+target="_blank"><img src="20120515100857942.jpg" 
+
+tppabs="http://www.djhr168.com/UploadFile/Links/20120515100857942.jpg" height="46" 
+
+border="0"></a></td>
+			
+              <td width="171"><a href="http://www.newjobs.com.cn/jyzd/index.html" 
+
+target="_blank"><img src="20120515101023864.jpg" 
+
+tppabs="http://www.djhr168.com/UploadFile/Links/20120515101023864.jpg" height="46" 
+
+border="0"></a></td>
+			
+            </tr>
+          </table>
+		  </TD>
+<TD id=td2 vAlign=top> </TD></TR></TABLE>
+</DIV>
+<SCRIPT language="javascript">
+var n=5
+//数值越大图片滚动的越快
+td2.innerHTML=td1.innerHTML
+var Mycheck;
+function move()
+{
+	if(td2.offsetWidth-div1.scrollLeft<=0)
+		div1.scrollLeft-=td1.offsetWidth
+	else
+	{div1.scrollLeft++}
+    Mycheck=setTimeout(move,n)
+}
+div1.onmouseover=function() {clearTimeout(Mycheck)}
+div1.onmouseout=function() {Mycheck=setTimeout(move,n)}
+move();
+</SCRIPT>
+</TD>
+</TR></TABLE>
+<div id="foot">
+  <div style="height:6px; overflow:hidden;background-color:#535353"></div>
+    <ul>
+	  <li></li>
+	  <li>版权所有2010-2015 广州东佳企业管理咨询有限公司 备案号:粤ICP备11095050号 技术
+
+支持:<a href="http://www.oyky.net/" target="_blank">广州网站建设</a></li>
+	</ul>
+  </div>
+</body>
+</html>

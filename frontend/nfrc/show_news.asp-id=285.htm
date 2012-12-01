@@ -1,0 +1,364 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<title>资讯中心-广州东佳人事网</title>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : _$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : _$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<body>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" type="text/css" />
+
+
+
+<div id="header">
+    <div style="margin:auto; width:1000px; background:url(images/index_01.jpg); height:95px;">
+		<ul style="height:20px; width:980px; margin-top:68px; text-align:right;">
+			  <li>客服在线:<a href="tencent://Message/?Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" /></a><a href="tencent://Message/?Uin=109629307
+&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+		</ul>
+	
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li style="background:none"><a href="index.asp.htm" tppabs="http://www.djhr168.com/index.asp">网站首页</a></li>
+			<li><a href="about.asp.htm" tppabs="http://www.djhr168.com/about.asp" rel='dropmenu1'>关于我们</a></li>
+		<li><a href="biyue.asp.htm" tppabs="http://www.djhr168.com/biyue.asp"  rel='dropmenu3'>毕业生接收</a></li>
+
+	<li><a href="rencai.asp.htm" tppabs="http://www.djhr168.com/rencai.asp" rel='dropmenu2'>人才引进</a></li>
+		<li><a href="zhaogong.asp.htm" tppabs="http://www.djhr168.com/zhaogong.asp">招工入户</a></li>
+		<li><a href="teshe.asp.htm" tppabs="http://www.djhr168.com/teshe.asp">特色服务</a></li>
+		<li><a href="peixun.asp.htm" tppabs="http://www.djhr168.com/peixun.asp">教育培训</a></li>
+		<li><a href="dangan.asp.htm" tppabs="http://www.djhr168.com/dangan.asp">职称档案</a></li>
+		<li><a href="hangyue.asp.htm" tppabs="http://www.djhr168.com/hangyue.asp">行业资讯</a></li>
+	<li><a href="join.asp.htm" tppabs="http://www.djhr168.com/join.asp">联盟合作</a></li>	
+		<li><a href="zhaoxuan.asp.htm" tppabs="http://www.djhr168.com/zhaoxuan.asp">招贤纳才</a></li>
+		<li><a href="contact.asp.htm" tppabs="http://www.djhr168.com/contact.asp">联系我们</a></li>
+	  </ul>
+	</div>
+	
+	
+	
+	<div id="navimg" style="width:1000px;margin:auto">
+	</div>
+	<div style="margin:auto; width:1000px;">
+	
+<script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var swf_width=999;
+var swf_height=148;
+var files = "";
+var links = "";
+var texts = "";
+//这里设置调用标记
+linkarr[1] = "#";
+picarr[1]  = "11.jpg"/*tpa=http://www.djhr168.com/images/11.jpg*/;
+linkarr[2] = "#";
+picarr[2]  = "22.jpg"/*tpa=http://www.djhr168.com/images/22.jpg*/;
+
+for(i=1;i<picarr.length;i++){
+  if(files=="") files = picarr[i];
+  else files += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+  if(links=="") links = linkarr[i];
+  else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+  if(texts=="") texts = textarr[i];
+  else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/><param name="quality" value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_config=0xffffff|2|0x8CA2AD|60|0xffffff|0xff9900|0x000033|2|3|1|_blank">');  
+document.write('<embed src="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/ wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+</script>	
+	
+	</div>
+	<div style=" margin-top:5px;margin:auto; width:1000px;"><img src="index_05.jpg" tppabs="http://www.djhr168.com/images/index_05.jpg" width="999" height="33" alt=""></div>
+  </div>
+<div id="main" >
+    <script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : _$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : _$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<div id="left">
+	  <div><img src="index_06.jpg" tppabs="http://www.djhr168.com/images/index_06.jpg" width="241" height="35" alt=""></div>
+	  <div id="product">
+	    <ul>
+		  <li>
+		  <marquee behavior="scroll" direction="up" onmouseover="stop()" onmouseout="start()" scrollamount="2" style="margin:0px; padding:0px; height:320px"> <P><FONT color=#003366><FONT size=4>&nbsp;&nbsp;&nbsp; 因业务壮大，我公司已搬至210室办公，来访的客户请移步210室。</FONT></FONT></P>
+<P><FONT color=#003366 size=4>&nbsp;&nbsp;&nbsp; </FONT><FONT color=#003366><FONT size=4><STRONG><FONT color=#0000ff><FONT face=黑体 size=3>无需预付款，无需押金，先办理后收费，放心服务！</FONT><BR></FONT></STRONG>&nbsp;&nbsp;&nbsp; </FONT><FONT size=4>欢迎光临广州东佳人事网，为您提供优质的服务，您的问题我们将会给出专业的解决方案！</FONT></FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp; 统招大专中级职称或统招本科有学位35岁以下人士<FONT color=#0000ff>无需广州社保</FONT>也可办理入户广州手续，已婚单调入户广州快速办理中，欢迎来电咨询办理。</FONT></P>
+<P><FONT color=#ff0000 size=4>&nbsp;&nbsp;&nbsp;&nbsp; </FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp;</FONT></P></marquee></li>
+		</ul>
+	  </div>
+	  <div><img src="index_18.jpg" tppabs="http://www.djhr168.com/images/index_18.jpg" width="241" height="30" alt=""></div>
+	  <div id="contact">
+	    <ul>
+		  <li></li>
+		  <li>客服在线:<a href="tencent://Message/?Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" /></a><a href="tencent://Message/?Uin=109629307&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+
+		  <li style=" font-weight:bold">广州东佳人事网</li>
+		  <li>电话:020-28963479/22093611</li>
+		  <li>手机:13632403496</li>
+		  <li>QQ:109629307</li>
+		  <li>邮箱:109629307@qq.com</li>
+		  <li>地址:广州市天河区中山大道西787号</li>
+		  <li>裕丰商业中心210室</li>
+		</ul>
+  </div>
+</div>
+
+    <div id="right">
+      <div style="margin-top:5px;background:url(images/xiu.jpg) no-repeat; width:741px; height:32px;">
+      <table width="211" height="29" border="0">
+        <tr>
+          <td align="center"><font color="#FFFFFF" style="letter-spacing:5px;font-weight:bold; font-size:14px;">
+		  
+		  
+		  </font></td>
+        </tr>
+      </table>
+    </div>
+		<div id="i_product">
+		  <div id="i_product_content" style="line-height:22px;">
+		    
+			<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN style="FONT-SIZE: 18pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><SPAN style="FONT-SIZE: 18pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">远程教育</SPAN><FONT size=5><SPAN lang=EN-US style="FONT-SIZE: 18pt"><SPAN style="mso-spacerun: yes"><FONT face="Times New Roman">&nbsp; </FONT></SPAN></SPAN><SPAN style="FONT-SIZE: 18pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">免试入学</SPAN></FONT><SPAN style="FONT-SIZE: 18pt"><FONT face="Times New Roman"> </FONT></SPAN><SPAN style="FONT-SIZE: 18pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">国家承认学历</SPAN><SPAN lang=EN-US style="FONT-SIZE: 18pt"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: white; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 15.4pt; LINE-HEIGHT: 16.3pt; TEXT-ALIGN: left; mso-pagination: widow-orphan" align=left><SPAN style="FONT-SIZE: 9pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">远程教育是学生与教师、学生与教育组织之间主要采取多种媒体方式进行系统教学和通信联系的教育形式，是将课程传送给校园外的一处或多处学生的教育。现代远程教育则是指通过音频、视频（直播或录像）以及包括实时和非实时在内的计算机技术把课程传送到校园外的教育。现代远程教育是随着现代信息技术的发展而产生的一种新型教育方式。计算机技术、多媒体技术、通信技术的发展，特别是因特网</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9pt; COLOR: black"><FONT face="Times New Roman">(internet)</FONT></SPAN><SPAN style="FONT-SIZE: 9pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的迅猛发展，使远程教育的手段有了质的飞跃，成为高新技术条件下的远程教育。现代远程教育是以现代远程教育手段为主，兼容面授、函授和自学等传统教学形式，多种媒体优化组合的教育方式。</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体; mso-border-alt: none windowtext 0cm"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: white; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 15.4pt; LINE-HEIGHT: 16.3pt; TEXT-ALIGN: left; mso-pagination: widow-orphan" align=left><SPAN style="FONT-SIZE: 9.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">远程网络教育特点</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; FONT-FAMILY: &#718;&#805;"><BR><FONT face="Times New Roman">1</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">）、随时随地、灵活有效、个人掌握学习主动权有因特网的地方就可以上网络课堂</SPAN><SPAN style="FONT-SIZE: 9.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: Verdana; mso-hansi-font-family: Verdana">深圳如何报考远程教育</SPAN><SPAN style="FONT-SIZE: 9.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">！时间、地点，随你安排！学习不再和其他活动冲突。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; FONT-FAMILY: &#718;&#805;"><BR><FONT face="Times New Roman">2</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">）、个性化学习教学内容按课时</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">/</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">小节划分，明白的可以不听，不明白的可以多听几遍，直到听懂。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; FONT-FAMILY: &#718;&#805;"><BR><FONT face="Times New Roman">3</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">）、提供课程答疑，服务体贴周到网上特设各类课程答疑专区，可以随时向老师咨询并得到满意答复。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; FONT-FAMILY: &#718;&#805;"><BR><FONT face="Times New Roman">4</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">）、功能完善，操作简便课程选择、进度控制、账户管理、在线作业、在线测试，在线讨论、功能完善，操作更简便。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; FONT-FAMILY: &#718;&#805;"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: white; MARGIN: 0cm 0cm 0pt; LINE-HEIGHT: 16.3pt; TEXT-ALIGN: left; mso-pagination: widow-orphan" align=left><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">5</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">）、效率更高，费用更省</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">,</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">省下大量交通费、住宿费和宝贵时间，令学习效率更高。</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体; mso-border-alt: none windowtext 0cm; mso-no-proof: yes"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: white; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 15.4pt; LINE-HEIGHT: 16.3pt; TEXT-ALIGN: left; mso-pagination: widow-orphan" align=left><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体; mso-border-alt: none windowtext 0cm; mso-no-proof: yes"><?xml:namespace prefix = v ns = "urn:schemas-microsoft-com:vml" /><v:shapetype id=_x0000_t75 stroked="f" filled="f" path="m@4@5l@4@11@9@11@9@5xe" o:preferrelative="t" o:spt="75" coordsize="21600,21600"><v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0"></v:f><v:f eqn="sum @0 1 0"></v:f><v:f eqn="sum 0 0 @1"></v:f><v:f eqn="prod @2 1 2"></v:f><v:f eqn="prod @3 21600 pixelWidth"></v:f><v:f eqn="prod @3 21600 pixelHeight"></v:f><v:f eqn="sum @0 0 1"></v:f><v:f eqn="prod @6 1 2"></v:f><v:f eqn="prod @7 21600 pixelWidth"></v:f><v:f eqn="sum @8 21600 0"></v:f><v:f eqn="prod @7 21600 pixelHeight"></v:f><v:f eqn="sum @10 21600 0"></v:f></v:formulas><v:path o:connecttype="rect" gradientshapeok="t" o:extrusionok="f"></v:path><o:lock aspectratio="t" v:ext="edit"></o:lock></v:shapetype><v:shape id=图片_x0020_28 style="VISIBILITY: visible; WIDTH: 99.75pt; HEIGHT: 24pt" alt="C:\Users\Administrator\AppData\Roaming\Tencent\Users\285886801\QQ\WinTemp\RichOle\ZA0BUYT%VM5R1UW6@_$T3(N.jpg" type="#_x0000_t75" o:spid="_x0000_i1025"><v:imagedata o:title="ZA0BUYT%VM5R1UW6@_$T3(N" src="file:///C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\msohtml1\01\clip_image001.jpg"></v:imagedata></v:shape></SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体; mso-border-alt: none windowtext 0cm">是以信息与电子学科为主，工、理、管、文多学科协调发展的全国重点大学，直属教育部，是国家“</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm"><FONT face="Times New Roman">985</FONT></SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体; mso-border-alt: none windowtext 0cm">优势学科创新平台”项目和“</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm"><FONT face="Times New Roman">211</FONT></SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体; mso-border-alt: none windowtext 0cm">工程”项目重点建设高校之一，</SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm">是全国</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm"><FONT face="Times New Roman">56</FONT></SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm">所设有研究生院的高校之一，</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm"><FONT face="Times New Roman">37</FONT></SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm">所示范性软件学院的高校之一，也是全国</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm"><FONT face="Times New Roman">20</FONT></SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm">所获批设立集成电路人才培养基地的高校之一。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt; COLOR: #363636; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="BACKGROUND: white; MARGIN: 0cm 0cm 0pt; LAYOUT-GRID-MODE: char; TEXT-INDENT: 18pt; LINE-HEIGHT: 20pt; TEXT-ALIGN: left; mso-pagination: widow-orphan" align=left><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体; mso-border-alt: none windowtext 0cm">学校前身是</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm"><FONT face="Times New Roman">1931</FONT></SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm">年诞生于江西瑞金的中央军委无线电学校，是毛泽东等老一辈革命家亲手创建的第一所工程技术学校。</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm"><FONT face="Times New Roman">1958</FONT></SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm">年学校迁址西安，</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm"><FONT face="Times New Roman">1966</FONT></SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm">年转为地方建制，</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm"><FONT face="Times New Roman">1988</FONT></SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-font-kerning: 0pt; mso-border-alt: none windowtext 0cm">年定为现名。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 12pt; COLOR: #363636; FONT-FAMILY: 宋体; mso-font-kerning: 0pt; mso-bidi-font-family: 宋体"><o:p></o:p></SPAN></P>
+<P style="BACKGROUND: white; LINE-HEIGHT: 161%"><SPAN lang=EN-US style="FONT-SIZE: 24pt; LINE-HEIGHT: 161%; mso-no-proof: yes"><v:shape id=图片_x0020_32 style="VISIBILITY: visible; WIDTH: 110.25pt; HEIGHT: 18.75pt" alt="C:\Users\Administrator\AppData\Roaming\Tencent\Users\285886801\QQ\WinTemp\RichOle\N9RSRSD)(LJGWS58GS2CF73.jpg" type="#_x0000_t75" o:spid="_x0000_i1026"><v:imagedata o:title="N9RSRSD)(LJGWS58GS2CF73" src="file:///C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\msohtml1\01\clip_image003.jpg"></v:imagedata></v:shape></SPAN><SPAN style="FONT-SIZE: 7.5pt; COLOR: #333333; LINE-HEIGHT: 161%; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial; mso-bidi-font-family: Arial">华</SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-border-alt: none windowtext 0cm">中科技大学是国家教育部直属的全国重点大学，由原华中理工大学、同济医科大学、武汉城市建设学院于</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 'Times New Roman'; mso-border-alt: none windowtext 0cm">2000</SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-border-alt: none windowtext 0cm">年</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 'Times New Roman'; mso-border-alt: none windowtext 0cm">5</SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-border-alt: none windowtext 0cm">月</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 'Times New Roman'; mso-border-alt: none windowtext 0cm">26</SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-border-alt: none windowtext 0cm">日合并成立，是首批列入国家</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 'Times New Roman'; mso-border-alt: none windowtext 0cm">“211</SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-border-alt: none windowtext 0cm">工程</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 'Times New Roman'; mso-border-alt: none windowtext 0cm">”</SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-border-alt: none windowtext 0cm">重点建设和国家</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 'Times New Roman'; mso-border-alt: none windowtext 0cm">“985</SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-border-alt: none windowtext 0cm">工程</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 'Times New Roman'; mso-border-alt: none windowtext 0cm">”</SPAN><SPAN style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-border-alt: none windowtext 0cm">建设高校之一。</SPAN><SPAN lang=EN-US style="BORDER-RIGHT: windowtext 1pt; PADDING-RIGHT: 0cm; BORDER-TOP: windowtext 1pt; PADDING-LEFT: 0cm; FONT-SIZE: 9pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt; COLOR: #363636; LINE-HEIGHT: 161%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt; FONT-FAMILY: 'Times New Roman'; mso-border-alt: none windowtext 0cm"><o:p></o:p></SPAN></P>
+<TABLE class=MsoNormalTable style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN: auto 6.75pt; BORDER-LEFT: medium none; WIDTH: 473.2pt; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-border-alt: solid windowtext .5pt; mso-table-lspace: 9.0pt; mso-table-rspace: 9.0pt; mso-table-anchor-vertical: page; mso-table-anchor-horizontal: margin; mso-table-left: left; mso-table-top: 536.6pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext" cellSpacing=0 cellPadding=0 width=631 align=left border=1>
+<TBODY>
+<TR style="HEIGHT: 20.8pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 55.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 20.8pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt" vAlign=top width=73>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly"><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>学校</FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 9cm; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 20.8pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" vAlign=top width=340>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly"><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>专业设置</FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 35.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 20.8pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" vAlign=top width=47>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly"><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>学制</FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 35.45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 20.8pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" vAlign=top width=47>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly"><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>层次</FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 92.15pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 20.8pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" vAlign=top width=123>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly"><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>学费</FONT></SPAN></P></TD></TR>
+<TR style="HEIGHT: 70.4pt; mso-yfti-irow: 1">
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 55.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 70.4pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" width=73>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly" align=center><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>西安电子科技大学</FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 9cm; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 70.4pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" width=340>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly" align=left><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>工商管理、人力资源管理、市场营销、金融学、工商管理（项目管理方向）、会计学、信息管理与信息系统、网络工程、软件工程、电子商务、计算机科学与技术、通信工程、机械设计制造及其自动化、电气工程及其自动化。</FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 35.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 70.4pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" width=47>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly" align=center><FONT size=3><SPAN lang=EN-US><FONT face="Times New Roman">2.5</FONT></SPAN><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">年</SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 35.45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 70.4pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" width=47>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly" align=center><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>本科</FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 92.15pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 70.4pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" width=123>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly" align=center><FONT size=3><SPAN lang=EN-US><FONT face="Times New Roman">4688</FONT></SPAN><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">元</SPAN><SPAN lang=EN-US><FONT face="Times New Roman">/</FONT></SPAN><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">年，共二年，</SPAN></FONT></P></TD></TR>
+<TR style="HEIGHT: 90.25pt; mso-yfti-irow: 2; mso-yfti-lastrow: yes">
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 55.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 90.25pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" width=73>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly" align=center><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>华中科技大学</FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 9cm; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 90.25pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" width=340>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: left; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly" align=left><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>行政管理、经济管理、建筑工程技术、机电一体化技术、计算机应用技术、模具设计与制造、会计、国际经济与贸易、物流管理、电子电路设计与工艺、应用化工技术、电子商务、道路桥梁工程技术、护理（医学类）、药学（医学类）。</FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 35.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 90.25pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" width=47>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly" align=center><FONT size=3><SPAN lang=EN-US><FONT face="Times New Roman">2.5</FONT></SPAN><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">年</SPAN></FONT></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 35.45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 90.25pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" width=47>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly" align=center><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'"><FONT size=3>专科</FONT></SPAN></P></TD>
+<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: #ece9d8; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: #ece9d8; WIDTH: 92.15pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 90.25pt; BACKGROUND-COLOR: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" width=123>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center; mso-element: frame; mso-element-frame-hspace: 9.0pt; mso-element-wrap: around; mso-element-anchor-vertical: page; mso-element-anchor-horizontal: margin; mso-element-top: 536.6pt; mso-height-rule: exactly" align=center><FONT size=3><SPAN lang=EN-US><FONT face="Times New Roman">3980</FONT></SPAN><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">元</SPAN><SPAN lang=EN-US><FONT face="Times New Roman">/</FONT></SPAN><SPAN style="FONT-FAMILY: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">年，共二年</SPAN></FONT></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">报名及入学考试：</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><BR></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">1</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">）全年均可报名，一般是每年</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">4-9</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">月报名为秋季入学，</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">10-3</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">月报名为春季入学；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><BR></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">2</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">）由于每所高校要求不同，具体报名及入学考试时间请咨询当地校外学习中心；</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><BR></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">3</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">）报名时须提交资料：身份证、毕业证复印件各一份、</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">1</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">寸、</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">2</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">寸彩色蓝底照</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">4</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">张</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">（</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">4</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">）报名费</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">800</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">元，录取成功后补齐学费，如未能录取退还全部报名费。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><o:p><FONT face="Times New Roman">&nbsp;</FONT></o:p></SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><o:p><FONT face="Times New Roman">&nbsp;</FONT></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">备注：学费包括所有费用，教材可自愿购买。</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">(</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">网络学习一般不需要</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">)<o:p></o:p></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">报名地址：广州市天河区中山大道西</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">787</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">号裕丰商务中心</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><FONT face="Times New Roman">230</FONT></SPAN><SPAN style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: 宋体; mso-ascii-font-family: &#718;&#805;; mso-hansi-font-family: &#718;&#805;">室</SPAN><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US style="FONT-SIZE: 9.5pt; COLOR: black; FONT-FAMILY: &#718;&#805;"><o:p><FONT face="Times New Roman">&nbsp;</FONT></o:p></SPAN></P>
+		  </div>
+		</div>
+         <div><img src="index_20.jpg" tppabs="http://www.djhr168.com/images/index_20.jpg" width="741" height="11" alt=""></div>
+  </div>	
+</div>
+  
+    
+
+
+<TABLE style=" margin-top:8px;"; cellSpacing=0 cellPadding=0 width=1000 align=center border=0>
+  <TR>
+    <TD>
+<DIV id=div1 style="OVERFLOW: hidden; WIDTH: 100%; COLOR: #ffffff">
+      <TABLE cellSpacing=0 cellPadding=0 align=left border=0 cellspace="0">
+        <TR>
+          <TD id=td1 vAlign=top>
+		  <table width="1710" height="50"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+			
+              <td width="171"><a href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryGraduateApply.aspx" target="_blank"><img src="20111117113941254.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117113941254.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryPersonIntroduce.aspx" target="_blank"><img src="20111117114212262.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117114212262.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.ahelp.cn/" target="_blank"><img src="20120515094809140.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515094809140.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.mohrss.gov.cn/" target="_blank"><img src="20120515095246546.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515095246546.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.gdrst.gov.cn/" target="_blank"><img src="20120515095550448.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515095550448.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.chsi.com.cn/xlcx/" target="_blank"><img src="20111117114430973.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117114430973.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://gzsc.gzlm.net/" target="_blank"><img src="20120515100612872.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515100612872.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://gzcsh.gzmz.gov.cn/" target="_blank"><img src="20120515134020340.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515134020340.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.cjob.gov.cn/cjob/f_index.do" target="_blank"><img src="20120515100857942.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515100857942.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.newjobs.com.cn/jyzd/index.html" target="_blank"><img src="20120515101023864.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515101023864.jpg" height="46" border="0"></a></td>
+			
+            </tr>
+          </table>
+		  </TD>
+<TD id=td2 vAlign=top> </TD></TR></TABLE>
+</DIV>
+<SCRIPT language="javascript">
+var n=5
+//数值越大图片滚动的越快
+td2.innerHTML=td1.innerHTML
+var Mycheck;
+function move()
+{
+	if(td2.offsetWidth-div1.scrollLeft<=0)
+		div1.scrollLeft-=td1.offsetWidth
+	else
+	{div1.scrollLeft++}
+    Mycheck=setTimeout(move,n)
+}
+div1.onmouseover=function() {clearTimeout(Mycheck)}
+div1.onmouseout=function() {Mycheck=setTimeout(move,n)}
+move();
+</SCRIPT>
+</TD>
+</TR></TABLE>
+<div id="foot">
+  <div style="height:6px; overflow:hidden;background-color:#535353"></div>
+    <ul>
+	  <li></li>
+	  <li>版权所有2010-2015 广州东佳企业管理咨询有限公司 备案号:粤ICP备11095050号 技术支持:<a href="http://www.oyky.net/" target="_blank">广州网站建设</a></li>
+	</ul>
+  </div>
+</body>
+</html>

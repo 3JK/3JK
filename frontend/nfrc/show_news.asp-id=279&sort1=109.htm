@@ -1,0 +1,340 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<title>资讯中心-广州东佳人事网</title>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : _$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : _$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<body>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" type="text/css" />
+
+
+
+<div id="header">
+    <div style="margin:auto; width:1000px; background:url(images/index_01.jpg); height:95px;">
+		<ul style="height:20px; width:980px; margin-top:68px; text-align:right;">
+			  <li>客服在线:<a href="tencent://Message/?Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" /></a><a href="tencent://Message/?Uin=109629307
+&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+		</ul>
+	
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li style="background:none"><a href="index.asp.htm" tppabs="http://www.djhr168.com/index.asp">网站首页</a></li>
+			<li><a href="about.asp.htm" tppabs="http://www.djhr168.com/about.asp" rel='dropmenu1'>关于我们</a></li>
+		<li><a href="biyue.asp.htm" tppabs="http://www.djhr168.com/biyue.asp"  rel='dropmenu3'>毕业生接收</a></li>
+
+	<li><a href="rencai.asp.htm" tppabs="http://www.djhr168.com/rencai.asp" rel='dropmenu2'>人才引进</a></li>
+		<li><a href="zhaogong.asp.htm" tppabs="http://www.djhr168.com/zhaogong.asp">招工入户</a></li>
+		<li><a href="teshe.asp.htm" tppabs="http://www.djhr168.com/teshe.asp">特色服务</a></li>
+		<li><a href="peixun.asp.htm" tppabs="http://www.djhr168.com/peixun.asp">教育培训</a></li>
+		<li><a href="dangan.asp.htm" tppabs="http://www.djhr168.com/dangan.asp">职称档案</a></li>
+		<li><a href="hangyue.asp.htm" tppabs="http://www.djhr168.com/hangyue.asp">行业资讯</a></li>
+	<li><a href="join.asp.htm" tppabs="http://www.djhr168.com/join.asp">联盟合作</a></li>	
+		<li><a href="zhaoxuan.asp.htm" tppabs="http://www.djhr168.com/zhaoxuan.asp">招贤纳才</a></li>
+		<li><a href="contact.asp.htm" tppabs="http://www.djhr168.com/contact.asp">联系我们</a></li>
+	  </ul>
+	</div>
+	
+	
+	
+	<div id="navimg" style="width:1000px;margin:auto">
+	</div>
+	<div style="margin:auto; width:1000px;">
+	
+<script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var swf_width=999;
+var swf_height=148;
+var files = "";
+var links = "";
+var texts = "";
+//这里设置调用标记
+linkarr[1] = "#";
+picarr[1]  = "11.jpg"/*tpa=http://www.djhr168.com/images/11.jpg*/;
+linkarr[2] = "#";
+picarr[2]  = "22.jpg"/*tpa=http://www.djhr168.com/images/22.jpg*/;
+
+for(i=1;i<picarr.length;i++){
+  if(files=="") files = picarr[i];
+  else files += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+  if(links=="") links = linkarr[i];
+  else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+  if(texts=="") texts = textarr[i];
+  else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/><param name="quality" value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_config=0xffffff|2|0x8CA2AD|60|0xffffff|0xff9900|0x000033|2|3|1|_blank">');  
+document.write('<embed src="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/ wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+</script>	
+	
+	</div>
+	<div style=" margin-top:5px;margin:auto; width:1000px;"><img src="index_05.jpg" tppabs="http://www.djhr168.com/images/index_05.jpg" width="999" height="33" alt=""></div>
+  </div>
+<div id="main" >
+    <script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : _$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : _$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<div id="left">
+	  <div><img src="index_06.jpg" tppabs="http://www.djhr168.com/images/index_06.jpg" width="241" height="35" alt=""></div>
+	  <div id="product">
+	    <ul>
+		  <li>
+		  <marquee behavior="scroll" direction="up" onmouseover="stop()" onmouseout="start()" scrollamount="2" style="margin:0px; padding:0px; height:320px"> <P><FONT color=#003366><FONT size=4>&nbsp;&nbsp;&nbsp; 因业务壮大，我公司已搬至210室办公，来访的客户请移步210室。</FONT></FONT></P>
+<P><FONT color=#003366 size=4>&nbsp;&nbsp;&nbsp; </FONT><FONT color=#003366><FONT size=4><STRONG><FONT color=#0000ff><FONT face=黑体 size=3>无需预付款，无需押金，先办理后收费，放心服务！</FONT><BR></FONT></STRONG>&nbsp;&nbsp;&nbsp; </FONT><FONT size=4>欢迎光临广州东佳人事网，为您提供优质的服务，您的问题我们将会给出专业的解决方案！</FONT></FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp; 统招大专中级职称或统招本科有学位35岁以下人士<FONT color=#0000ff>无需广州社保</FONT>也可办理入户广州手续，已婚单调入户广州快速办理中，欢迎来电咨询办理。</FONT></P>
+<P><FONT color=#ff0000 size=4>&nbsp;&nbsp;&nbsp;&nbsp; </FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp;</FONT></P></marquee></li>
+		</ul>
+	  </div>
+	  <div><img src="index_18.jpg" tppabs="http://www.djhr168.com/images/index_18.jpg" width="241" height="30" alt=""></div>
+	  <div id="contact">
+	    <ul>
+		  <li></li>
+		  <li>客服在线:<a href="tencent://Message/?Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" /></a><a href="tencent://Message/?Uin=109629307&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+
+		  <li style=" font-weight:bold">广州东佳人事网</li>
+		  <li>电话:020-28963479/22093611</li>
+		  <li>手机:13632403496</li>
+		  <li>QQ:109629307</li>
+		  <li>邮箱:109629307@qq.com</li>
+		  <li>地址:广州市天河区中山大道西787号</li>
+		  <li>裕丰商业中心210室</li>
+		</ul>
+  </div>
+</div>
+
+    <div id="right">
+      <div style="margin-top:5px;background:url(images/xiu.jpg) no-repeat; width:741px; height:32px;">
+      <table width="211" height="29" border="0">
+        <tr>
+          <td align="center"><font color="#FFFFFF" style="letter-spacing:5px;font-weight:bold; font-size:14px;">
+		  特色服务
+		  
+		  </font></td>
+        </tr>
+      </table>
+    </div>
+		<div id="i_product">
+		  <div id="i_product_content" style="line-height:22px;">
+		    
+			<P><SPAN style="COLOR: black; FONT-SIZE: 12pt"><STRONG>一、什么是猎头<SPAN lang=EN-US><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></STRONG></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">猎头特指猎夺人才，即发现、追踪、评价、甄选和举荐高级人才。充当猎头的人员，必须具有良好的人格品质、良好的教育背景和较丰富的社会经验；必须拥有广泛的知识积累并在某专业上有相当突出的造诣。此外还要有优秀的中外语言表达和文字表达能力、人际关系以及较强的计算机网络技术等。</SPAN><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 9.0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 12pt"><STRONG>二、猎头服务主要对象<SPAN lang=EN-US><o:p></o:p></SPAN></STRONG></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">一般来说，主要是总裁、副总裁、总经理、副总经理、人事总监、人事经理、财务总监、财务经理、市场总监、市场经理、营销经理、产品经理、技术总监、技术经理、厂长、生产部经理、高级项目经理、高级工程师、博士后、博士、工商管理高级人才、其他高级顾问及其他经理以上人才等。</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 12pt"><STRONG>三、猎头服务主要方式<SPAN lang=EN-US><o:p></o:p></SPAN></STRONG></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">通常有一般委托服务和长期委托服务两种：</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">一般委托服务指：</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt"> </SPAN><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">针对具体项目进行的猎头服务。根据职位的高低、难度大小、区域特点、客户要求等，采取不同的收费标准。这种形式比较适合少量高级人才需求的单位。</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">长期委托服务指：用人单位与猎头公司协议，进行长期合作，针对多个职位以猎头方式寻访所需高级人才。以充分利用专业猎头公司建立的人才寻访网络，达到事半功倍的目的。</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">合作方式分为全面委托、部分委托两种，根据具体情况确定相应的收费标准。全面委托一般是指无固定期限和不限制中低级职位的合作方式，包括普通职位和中高级职位全面进行委托（不含特殊职位），相当于将用人单位人力资源部的招聘职能承包起来。此种合作一般在双方全面了解和信任的基础上进行</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P><STRONG><SPAN style="COLOR: black; FONT-SIZE: 12pt">四、</SPAN><SPAN style="FONT-SIZE: 12pt">猎头服务工作流程<SPAN style="COLOR: black" lang=EN-US><o:p></o:p></SPAN></SPAN></STRONG></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">猎头是专为客户提供中、高级职位及特殊职位人才招聘及相关咨询的服务。我们将用以下规范的服务流程来确保我们的服务质量：</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US><o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US>1</SPAN><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">、分析客户需求：</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">　　与客户进行充分、有效的沟通，以了解客户的企业文化、历史、产品、管理风格。并与客户共同对空缺职位进行分析，对该职位的职责、经验、待遇、汇报关系和人选类型等方面达成共识。</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US>2</SPAN><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">、制订职位需求并进行搜寻：</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">　　在全面分析客户需求后，我们将提交一份书面的职位需求描述，并在此基础上，利用我们庞大的人才库、与各行业有关机构及人士的关系网络，与每一位潜在的候选人进行专门的技巧性接触。同时将该职位的招聘广告以匿名形式刊登在我们的网页上。</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US>3</SPAN><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">、筛选候选人：</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">　　对所有接触到的候选人信息进行分析，包括候选人的岗位现状、离职可能性、目前薪酬等。筛选出基本符合要求的候选人，并安排面试初试。</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US>4</SPAN><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">、面试及评估候选人：</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">　　对候选人进行面试初试，主要对候选人的个性、能力、专业技术知识、工作业绩、优势与不足等进行评测。并在此基础上，撰写候选人综合评估报告。</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US>5</SPAN><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">、协助客户面试候选人：</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">　　将评估过的候选人综合信息提供给客户，根据客户的要求安排候选人与客户面谈，收集来自客户与候选人的反馈，协助双方就具体聘用条件进行有效沟通。</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US>6</SPAN><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">、背景调查：</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">　　在客户对候选人表示满意后，我们将从候选人的同事、前人主管等处了解候选人的个人品质、人性特征、工作习惯等信息，提供给客户参考。</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US>7</SPAN><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">、咨询与跟进服务：</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US> <o:p></o:p></SPAN></P>
+<P><SPAN style="COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt">　　向被录用的候选人提供辞职方面的人事咨询与帮助，与客户保持不间断联系，协助双方解决试用期期间可能遇到的困难与障碍，确保候选人试用成功，达到双方满意的效果。</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman'; COLOR: black; FONT-SIZE: 10.5pt; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt" lang=EN-US><o:p></o:p></SPAN></P>
+		  </div>
+		</div>
+         <div><img src="index_20.jpg" tppabs="http://www.djhr168.com/images/index_20.jpg" width="741" height="11" alt=""></div>
+  </div>	
+</div>
+  
+    
+
+
+<TABLE style=" margin-top:8px;"; cellSpacing=0 cellPadding=0 width=1000 align=center border=0>
+  <TR>
+    <TD>
+<DIV id=div1 style="OVERFLOW: hidden; WIDTH: 100%; COLOR: #ffffff">
+      <TABLE cellSpacing=0 cellPadding=0 align=left border=0 cellspace="0">
+        <TR>
+          <TD id=td1 vAlign=top>
+		  <table width="1710" height="50"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+			
+              <td width="171"><a href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryGraduateApply.aspx" target="_blank"><img src="20111117113941254.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117113941254.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryPersonIntroduce.aspx" target="_blank"><img src="20111117114212262.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117114212262.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.ahelp.cn/" target="_blank"><img src="20120515094809140.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515094809140.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.mohrss.gov.cn/" target="_blank"><img src="20120515095246546.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515095246546.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.gdrst.gov.cn/" target="_blank"><img src="20120515095550448.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515095550448.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.chsi.com.cn/xlcx/" target="_blank"><img src="20111117114430973.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117114430973.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://gzsc.gzlm.net/" target="_blank"><img src="20120515100612872.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515100612872.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://gzcsh.gzmz.gov.cn/" target="_blank"><img src="20120515134020340.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515134020340.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.cjob.gov.cn/cjob/f_index.do" target="_blank"><img src="20120515100857942.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515100857942.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.newjobs.com.cn/jyzd/index.html" target="_blank"><img src="20120515101023864.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515101023864.jpg" height="46" border="0"></a></td>
+			
+            </tr>
+          </table>
+		  </TD>
+<TD id=td2 vAlign=top> </TD></TR></TABLE>
+</DIV>
+<SCRIPT language="javascript">
+var n=5
+//数值越大图片滚动的越快
+td2.innerHTML=td1.innerHTML
+var Mycheck;
+function move()
+{
+	if(td2.offsetWidth-div1.scrollLeft<=0)
+		div1.scrollLeft-=td1.offsetWidth
+	else
+	{div1.scrollLeft++}
+    Mycheck=setTimeout(move,n)
+}
+div1.onmouseover=function() {clearTimeout(Mycheck)}
+div1.onmouseout=function() {Mycheck=setTimeout(move,n)}
+move();
+</SCRIPT>
+</TD>
+</TR></TABLE>
+<div id="foot">
+  <div style="height:6px; overflow:hidden;background-color:#535353"></div>
+    <ul>
+	  <li></li>
+	  <li>版权所有2010-2015 广州东佳企业管理咨询有限公司 备案号:粤ICP备11095050号 技术支持:<a href="http://www.oyky.net/" target="_blank">广州网站建设</a></li>
+	</ul>
+  </div>
+</body>
+</html>

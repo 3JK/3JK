@@ -1,0 +1,318 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<title>资讯中心-广州东佳人事网</title>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : _$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : _$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<body>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" type="text/css" />
+
+
+
+<div id="header">
+    <div style="margin:auto; width:1000px; background:url(images/index_01.jpg); height:95px;">
+		<ul style="height:20px; width:980px; margin-top:68px; text-align:right;">
+			  <li>客服在线:<a href="tencent://Message/?Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" /></a><a href="tencent://Message/?Uin=109629307
+&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+		</ul>
+	
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li style="background:none"><a href="index.asp.htm" tppabs="http://www.djhr168.com/index.asp">网站首页</a></li>
+			<li><a href="about.asp.htm" tppabs="http://www.djhr168.com/about.asp" rel='dropmenu1'>关于我们</a></li>
+		<li><a href="biyue.asp.htm" tppabs="http://www.djhr168.com/biyue.asp"  rel='dropmenu3'>毕业生接收</a></li>
+
+	<li><a href="rencai.asp.htm" tppabs="http://www.djhr168.com/rencai.asp" rel='dropmenu2'>人才引进</a></li>
+		<li><a href="zhaogong.asp.htm" tppabs="http://www.djhr168.com/zhaogong.asp">招工入户</a></li>
+		<li><a href="teshe.asp.htm" tppabs="http://www.djhr168.com/teshe.asp">特色服务</a></li>
+		<li><a href="peixun.asp.htm" tppabs="http://www.djhr168.com/peixun.asp">教育培训</a></li>
+		<li><a href="dangan.asp.htm" tppabs="http://www.djhr168.com/dangan.asp">职称档案</a></li>
+		<li><a href="hangyue.asp.htm" tppabs="http://www.djhr168.com/hangyue.asp">行业资讯</a></li>
+	<li><a href="join.asp.htm" tppabs="http://www.djhr168.com/join.asp">联盟合作</a></li>	
+		<li><a href="zhaoxuan.asp.htm" tppabs="http://www.djhr168.com/zhaoxuan.asp">招贤纳才</a></li>
+		<li><a href="contact.asp.htm" tppabs="http://www.djhr168.com/contact.asp">联系我们</a></li>
+	  </ul>
+	</div>
+	
+	
+	
+	<div id="navimg" style="width:1000px;margin:auto">
+	</div>
+	<div style="margin:auto; width:1000px;">
+	
+<script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var swf_width=999;
+var swf_height=148;
+var files = "";
+var links = "";
+var texts = "";
+//这里设置调用标记
+linkarr[1] = "#";
+picarr[1]  = "11.jpg"/*tpa=http://www.djhr168.com/images/11.jpg*/;
+linkarr[2] = "#";
+picarr[2]  = "22.jpg"/*tpa=http://www.djhr168.com/images/22.jpg*/;
+
+for(i=1;i<picarr.length;i++){
+  if(files=="") files = picarr[i];
+  else files += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+  if(links=="") links = linkarr[i];
+  else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+  if(texts=="") texts = textarr[i];
+  else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/><param name="quality" value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_config=0xffffff|2|0x8CA2AD|60|0xffffff|0xff9900|0x000033|2|3|1|_blank">');  
+document.write('<embed src="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/ wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+</script>	
+	
+	</div>
+	<div style=" margin-top:5px;margin:auto; width:1000px;"><img src="index_05.jpg" tppabs="http://www.djhr168.com/images/index_05.jpg" width="999" height="33" alt=""></div>
+  </div>
+<div id="main" >
+    <script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : _$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : _$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<div id="left">
+	  <div><img src="index_06.jpg" tppabs="http://www.djhr168.com/images/index_06.jpg" width="241" height="35" alt=""></div>
+	  <div id="product">
+	    <ul>
+		  <li>
+		  <marquee behavior="scroll" direction="up" onmouseover="stop()" onmouseout="start()" scrollamount="2" style="margin:0px; padding:0px; height:320px"> <P><FONT color=#003366><FONT size=4>&nbsp;&nbsp;&nbsp; 因业务壮大，我公司已搬至210室办公，来访的客户请移步210室。</FONT></FONT></P>
+<P><FONT color=#003366 size=4>&nbsp;&nbsp;&nbsp; </FONT><FONT color=#003366><FONT size=4><STRONG><FONT color=#0000ff><FONT face=黑体 size=3>无需预付款，无需押金，先办理后收费，放心服务！</FONT><BR></FONT></STRONG>&nbsp;&nbsp;&nbsp; </FONT><FONT size=4>欢迎光临广州东佳人事网，为您提供优质的服务，您的问题我们将会给出专业的解决方案！</FONT></FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp; 统招大专中级职称或统招本科有学位35岁以下人士<FONT color=#0000ff>无需广州社保</FONT>也可办理入户广州手续，已婚单调入户广州快速办理中，欢迎来电咨询办理。</FONT></P>
+<P><FONT color=#ff0000 size=4>&nbsp;&nbsp;&nbsp;&nbsp; </FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp;</FONT></P></marquee></li>
+		</ul>
+	  </div>
+	  <div><img src="index_18.jpg" tppabs="http://www.djhr168.com/images/index_18.jpg" width="241" height="30" alt=""></div>
+	  <div id="contact">
+	    <ul>
+		  <li></li>
+		  <li>客服在线:<a href="tencent://Message/?Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" /></a><a href="tencent://Message/?Uin=109629307&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+
+		  <li style=" font-weight:bold">广州东佳人事网</li>
+		  <li>电话:020-28963479/22093611</li>
+		  <li>手机:13632403496</li>
+		  <li>QQ:109629307</li>
+		  <li>邮箱:109629307@qq.com</li>
+		  <li>地址:广州市天河区中山大道西787号</li>
+		  <li>裕丰商业中心210室</li>
+		</ul>
+  </div>
+</div>
+
+    <div id="right">
+      <div style="margin-top:5px;background:url(images/xiu.jpg) no-repeat; width:741px; height:32px;">
+      <table width="211" height="29" border="0">
+        <tr>
+          <td align="center"><font color="#FFFFFF" style="letter-spacing:5px;font-weight:bold; font-size:14px;">
+		  
+		  
+		  </font></td>
+        </tr>
+      </table>
+    </div>
+		<div id="i_product">
+		  <div id="i_product_content" style="line-height:22px;">
+		    
+			<P>&nbsp;</P>
+<P align=center><FONT size=4>广东省普通高校毕业生暂缓就业档案户口管理暂行规定</FONT></P>
+<P>各普通高校： <BR><BR>　　为适应我生高等学校毕业生就业市场化的要求，缓解就业压力，为毕业生提供就业服务，根据教育部的精神及广东省教育厅、公安厅、粮食局《关于普通高等学校暂缓就业毕业生档案和户口管理问题的通知》（粤教毕[2000]8号）的规定，对暂未落实单位的省内高等学校毕业生，实行暂缓一年就业管理。暂缓就业期间毕业生的档案由省高等学校毕业生就业指导中心托管，户口暂留学校一年。为规范管理，特制定本暂行规定。 <BR><BR>　　一、办理对象及条件 <BR><BR>　　　非师范专业的本、专科层次的普通高校应届毕业生，只要符合粤教毕［2000］8号文规定的暂缓就业范围，都可以申请办理毕业生档案托管；对于师范本科层次的中文、英语、数学、计算机、政治、物理等专业的毕业生原则上不予办理。除教育学、经济、旅游、工商、政法、农科类的本科专业外，其他师范专业本科层次的毕业生需要办理档案托管手续的，必须征得其生源地市（指地级市，下同）教育行政部门同意，并出具书面意见，方可办理档案托管手续；毕业研究生暂不办理档案托管手续。 <BR><BR>　　二、办理程序 <BR><BR>　　　　需要办理暂缓就业的毕业生应在当年５月３１日前，向所在学校毕业生就业管理部门提出申请，经学校审核同意后，签订《协议书》，并交纳档案托管费。学校应于当年６月１０日前将办理档案托管手续的毕业生名单按规定的数据库报省高校毕业生就业指导中心，并一式三份报送《广东省普通高校办理档案托管手续毕业生名册》（简称《名册》，下同）。学校凭《名册》集中到学校户口所在地派出所办理缓迁户口手续。学校于当年７月３１日前将暂缓就业毕业生的档案集中送生高校毕业生就业指导中心。 <BR><BR>　　三、档案托管费 <BR><BR>　　　　办理档案托管手续的毕业生应按协议交纳档案托管费，由所在学校统一代收。收取的档案托管费三分之一留学校，作为办理毕业生暂缓就业有关手续的费用，其余的上交省教厅，主要用于毕业生档案的邮寄、管理和就业指导等费用。 <BR><BR>　　四、档案、户口托管的时间 <BR><BR>　　　　毕业生档案、户口托管的时间为当年７月至次年７月。暂缓就业的毕业生在暂缓就业一年期限内仍未落实接收单位的，由学校负责到学生户口所在地派出所办理户口迁出手续，将户口迁回学生原户口所在地，不得以各种理由将户口空挂在学校集体户口上。 <BR><BR>　　五、其他相关规定 <BR><BR>　　　　未办理档案托管手续的毕业生，按规定回生源地市毕业生就业主管部门报到。自学校规定的毕业生离校之日两周内，学校应将毕业生档案寄往生源地级市毕业生就业主管部门，学校不得留档。 <BR><BR>　　　　办理档案托管的毕业生必须办理离校手续，暂不发就业报到证，在托管期间内落实单位的，出具《协议书》及地级市人事部门或省直、中央驻粤单位的同意接受函，给予理有关就业手续。 <BR><BR>　　　　毕业生在档案托管期间，有条件的学校可为其提供相关的就业普物和指导。办理档案托管的毕业生凭《协议书》到省高校毕业生就业指导中心可优惠享受相关的就业服务和指导。 <BR><BR>　　六、本规定自发文之日起执行 <BR><BR>附件：协议书　　 <BR><BR>甲方：广东省高等学校毕业生就业指导中心 <BR><BR>乙方： <BR><BR>　　乙方于　　　年　月毕业于　　　　（学校），是　　　省　　　　市　　　县（市、区）生源，根据广东省教育厅、公安厅、粮食局《关于普通高等学校暂缓就业毕业生档案和户口管理问题的通知》（粤教毕[2000]8号）的规定及乙方的申请，甲方同意乙方暂缓一年（从乙方毕业当年７月１日至明年７月１日）就业，甲乙双方就有关问题达成协议如下： <BR><BR>　一、暂缓就业期限内，乙方的户口关系继续保留在学校。乙方在暂缓就业期限内落实就业单位的，凭省高等学校毕业生就业主管部门签发的《就业报到证》办理户口迁移手续。如果乙方在暂缓期限届满时仍未落实就业单位，必须在暂缓期限届满后的十天内到学校办理户口迁出手续。否则由乙方毕业院校直接办理乙方的户口迁出手续，迁回乙方生源所在地，并按乙方提供的通信地址（如有变更，乙方应及时通知学校）邮寄给乙方，邮寄乙方户口关系的一切后果由乙方承担。 <BR><BR>　二、暂缓就业期限内，乙方必须严格遵守法规法纪；如果乙方有违法违纪行为，甲方可以取消其派遣资格。户口关系按本协议第一条规定办理。 <BR><BR>　三、暂缓就业期限内，乙方的档案委托甲方管理。在签订本协议书时，乙方必须向甲方交180元档案管理费。 <BR><BR>　四、暂缓就业期限内，乙方如提出转移档案，必须提供接收单位人事主管部门的接档证明，并出示本协议书。甲方应在１０天内将乙方档案转往接收单位。 <BR><BR>　五、暂缓就业期限届满时，如乙方尚未办理档案转移手续，甲方将档案转回乙方生源所在地地级市毕业生就业主管部门。 <BR><BR>　六、本协议书一式两份，甲、乙双方各执一份。协议书字签定之日起生效。 <BR><BR>　　甲方签章　　　　　　　　　　　　　　　乙方签章： <BR><BR>　　联系电话　　　　　　　　　　　　　　　联系电话　　　　　　　　　　　　　 <BR>　　联系地址：广州市农林下路７２号三楼　　联系地址 <BR><BR>　　邮政编码：５１００８０　　　　　　　　邮政编码 　　</P>
+		  </div>
+		</div>
+         <div><img src="index_20.jpg" tppabs="http://www.djhr168.com/images/index_20.jpg" width="741" height="11" alt=""></div>
+  </div>	
+</div>
+  
+    
+
+
+<TABLE style=" margin-top:8px;"; cellSpacing=0 cellPadding=0 width=1000 align=center border=0>
+  <TR>
+    <TD>
+<DIV id=div1 style="OVERFLOW: hidden; WIDTH: 100%; COLOR: #ffffff">
+      <TABLE cellSpacing=0 cellPadding=0 align=left border=0 cellspace="0">
+        <TR>
+          <TD id=td1 vAlign=top>
+		  <table width="1710" height="50"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+			
+              <td width="171"><a href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryGraduateApply.aspx" target="_blank"><img src="20111117113941254.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117113941254.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryPersonIntroduce.aspx" target="_blank"><img src="20111117114212262.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117114212262.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.ahelp.cn/" target="_blank"><img src="20120515094809140.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515094809140.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.mohrss.gov.cn/" target="_blank"><img src="20120515095246546.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515095246546.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.gdrst.gov.cn/" target="_blank"><img src="20120515095550448.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515095550448.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.chsi.com.cn/xlcx/" target="_blank"><img src="20111117114430973.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117114430973.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://gzsc.gzlm.net/" target="_blank"><img src="20120515100612872.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515100612872.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://gzcsh.gzmz.gov.cn/" target="_blank"><img src="20120515134020340.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515134020340.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.cjob.gov.cn/cjob/f_index.do" target="_blank"><img src="20120515100857942.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515100857942.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.newjobs.com.cn/jyzd/index.html" target="_blank"><img src="20120515101023864.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515101023864.jpg" height="46" border="0"></a></td>
+			
+            </tr>
+          </table>
+		  </TD>
+<TD id=td2 vAlign=top> </TD></TR></TABLE>
+</DIV>
+<SCRIPT language="javascript">
+var n=5
+//数值越大图片滚动的越快
+td2.innerHTML=td1.innerHTML
+var Mycheck;
+function move()
+{
+	if(td2.offsetWidth-div1.scrollLeft<=0)
+		div1.scrollLeft-=td1.offsetWidth
+	else
+	{div1.scrollLeft++}
+    Mycheck=setTimeout(move,n)
+}
+div1.onmouseover=function() {clearTimeout(Mycheck)}
+div1.onmouseout=function() {Mycheck=setTimeout(move,n)}
+move();
+</SCRIPT>
+</TD>
+</TR></TABLE>
+<div id="foot">
+  <div style="height:6px; overflow:hidden;background-color:#535353"></div>
+    <ul>
+	  <li></li>
+	  <li>版权所有2010-2015 广州东佳企业管理咨询有限公司 备案号:粤ICP备11095050号 技术支持:<a href="http://www.oyky.net/" target="_blank">广州网站建设</a></li>
+	</ul>
+  </div>
+</body>
+</html>

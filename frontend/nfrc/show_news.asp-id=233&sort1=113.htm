@@ -1,0 +1,320 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<title>资讯中心-广州东佳人事网</title>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : _$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : _$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<body>
+<link href="css.css" tppabs="http://www.djhr168.com/css/css.css" rel="stylesheet" type="text/css" />
+
+
+
+<div id="header">
+    <div style="margin:auto; width:1000px; background:url(images/index_01.jpg); height:95px;">
+		<ul style="height:20px; width:980px; margin-top:68px; text-align:right;">
+			  <li>客服在线:<a href="tencent://Message/?Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" /></a><a href="tencent://Message/?Uin=109629307
+&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+		</ul>
+	
+	</div>
+	<div id="nav">
+	  <ul>
+	    <li style="background:none"><a href="index.asp.htm" tppabs="http://www.djhr168.com/index.asp">网站首页</a></li>
+			<li><a href="about.asp.htm" tppabs="http://www.djhr168.com/about.asp" rel='dropmenu1'>关于我们</a></li>
+		<li><a href="biyue.asp.htm" tppabs="http://www.djhr168.com/biyue.asp"  rel='dropmenu3'>毕业生接收</a></li>
+
+	<li><a href="rencai.asp.htm" tppabs="http://www.djhr168.com/rencai.asp" rel='dropmenu2'>人才引进</a></li>
+		<li><a href="zhaogong.asp.htm" tppabs="http://www.djhr168.com/zhaogong.asp">招工入户</a></li>
+		<li><a href="teshe.asp.htm" tppabs="http://www.djhr168.com/teshe.asp">特色服务</a></li>
+		<li><a href="peixun.asp.htm" tppabs="http://www.djhr168.com/peixun.asp">教育培训</a></li>
+		<li><a href="dangan.asp.htm" tppabs="http://www.djhr168.com/dangan.asp">职称档案</a></li>
+		<li><a href="hangyue.asp.htm" tppabs="http://www.djhr168.com/hangyue.asp">行业资讯</a></li>
+	<li><a href="join.asp.htm" tppabs="http://www.djhr168.com/join.asp">联盟合作</a></li>	
+		<li><a href="zhaoxuan.asp.htm" tppabs="http://www.djhr168.com/zhaoxuan.asp">招贤纳才</a></li>
+		<li><a href="contact.asp.htm" tppabs="http://www.djhr168.com/contact.asp">联系我们</a></li>
+	  </ul>
+	</div>
+	
+	
+	
+	<div id="navimg" style="width:1000px;margin:auto">
+	</div>
+	<div style="margin:auto; width:1000px;">
+	
+<script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var swf_width=999;
+var swf_height=148;
+var files = "";
+var links = "";
+var texts = "";
+//这里设置调用标记
+linkarr[1] = "#";
+picarr[1]  = "11.jpg"/*tpa=http://www.djhr168.com/images/11.jpg*/;
+linkarr[2] = "#";
+picarr[2]  = "22.jpg"/*tpa=http://www.djhr168.com/images/22.jpg*/;
+
+for(i=1;i<picarr.length;i++){
+  if(files=="") files = picarr[i];
+  else files += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+  if(links=="") links = linkarr[i];
+  else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+  if(texts=="") texts = textarr[i];
+  else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/><param name="quality" value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_config=0xffffff|2|0x8CA2AD|60|0xffffff|0xff9900|0x000033|2|3|1|_blank">');  
+document.write('<embed src="bcastr3.swf"/*tpa=http://www.djhr168.com/images/bcastr3.swf*/ wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+</script>	
+	
+	</div>
+	<div style=" margin-top:5px;margin:auto; width:1000px;"><img src="index_05.jpg" tppabs="http://www.djhr168.com/images/index_05.jpg" width="999" height="33" alt=""></div>
+  </div>
+<div id="main" >
+    <script>
+window.onerror = function(){return true};
+</script><script>
+var _$ = function(id,form){return "string" == typeof id ? (form ? eval("document.getElementById('"+form+"')."+id) : document.getElementById(id)) : id} //Firefox必须有id值
+var _$gname = function(name){return document.getElementsByName(name)} //获取所有Name对象
+var _$tag = function(name){return document.getElementsByTagName(name)} //通过Tag获取对象
+var _$gtag = function(name,tagName){return name ? _$(name).getElementsByTagName(tagName) : _$tag(tagName)} //通过Tag获取子对象
+var _$ihtml = function(id,s){_$(id).innerHTML = s}
+var _$itext = function(id,s){_$(id).innerText = s}
+var _$ivalue = function(id,s){_$(id).value = s}
+var _$gclass = function(name){return getElementsByClassName(name)} //通过className获取对象
+var _$db = function(id,form){form ? eval("_$('"+id+"','"+form+"').disabled = true") : _$(id).disabled = true} //关闭按钮
+String.prototype.trim = function(){return this.replace(/(^\s*)|(\s*$)/g,"")} //去掉前后空格 
+
+//======================= AJAX
+function XHR(){ //创建XMLHttpRequest
+var XHR = false;
+try{XHR = new ActiveXObject("Msxml2.XMLHTTP");
+}catch(e){
+    try{XHR = new ActiveXObject("Microsoft.XMLHTTP");
+    }catch(e){XHR = false;}
+}
+if(!XHR && typeof XMLHttpRequest != "undefined"){XHR = new XMLHttpRequest();}
+return XHR;
+}
+
+function getEvaluate(ID,agreeID,disagreeID){
+var xhr = XHR();
+xhr.open("GET", "Eva.asp?ID="+ID, false);
+xhr.send(null);
+var msgs = xhr.responseText.split(",");
+_$(agreeID).innerHTML = msgs[0];
+_$(disagreeID).innerHTML = msgs[1];
+}
+
+//======================= 获取URL参数
+function Request(name){
+var strHref = top.location.href;
+var intPos = strHref.indexOf("#");
+var strRight = strHref.substr(intPos + 1);
+var arrTmp = strRight.split("&");
+for(var i=0; i<arrTmp.length; i++){
+var arrTemp = arrTmp[i].split("=");
+if(arrTemp[0].toUpperCase() == name.toUpperCase()) return unescape(arrTemp[1]);
+}
+return null;
+}
+
+//======================= window.onload
+window.onload = function(){
+var tag = document.getElementsByTagName("A");
+for(var i=0; i<tag.length; i++)tag[i].onfocus = function(){this.blur();}
+var tagA = _$tag("Area");
+for(var i=0; i<tagA.length; i++)tagA[i].onfocus = function(){this.blur();}
+
+}
+</script>
+
+<div id="left">
+	  <div><img src="index_06.jpg" tppabs="http://www.djhr168.com/images/index_06.jpg" width="241" height="35" alt=""></div>
+	  <div id="product">
+	    <ul>
+		  <li>
+		  <marquee behavior="scroll" direction="up" onmouseover="stop()" onmouseout="start()" scrollamount="2" style="margin:0px; padding:0px; height:320px"> <P><FONT color=#003366><FONT size=4>&nbsp;&nbsp;&nbsp; 因业务壮大，我公司已搬至210室办公，来访的客户请移步210室。</FONT></FONT></P>
+<P><FONT color=#003366 size=4>&nbsp;&nbsp;&nbsp; </FONT><FONT color=#003366><FONT size=4><STRONG><FONT color=#0000ff><FONT face=黑体 size=3>无需预付款，无需押金，先办理后收费，放心服务！</FONT><BR></FONT></STRONG>&nbsp;&nbsp;&nbsp; </FONT><FONT size=4>欢迎光临广州东佳人事网，为您提供优质的服务，您的问题我们将会给出专业的解决方案！</FONT></FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp; 统招大专中级职称或统招本科有学位35岁以下人士<FONT color=#0000ff>无需广州社保</FONT>也可办理入户广州手续，已婚单调入户广州快速办理中，欢迎来电咨询办理。</FONT></P>
+<P><FONT color=#ff0000 size=4>&nbsp;&nbsp;&nbsp;&nbsp; </FONT></P>
+<P><FONT color=#800080 size=4>&nbsp;&nbsp;&nbsp;</FONT></P></marquee></li>
+		</ul>
+	  </div>
+	  <div><img src="index_18.jpg" tppabs="http://www.djhr168.com/images/index_18.jpg" width="241" height="30" alt=""></div>
+	  <div id="contact">
+	    <ul>
+		  <li></li>
+		  <li>客服在线:<a href="tencent://Message/?Uin=2314207133&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-2314207133-16.gif" tppabs="http://wpa.qq.com/pa?p=1:2314207133:16" /></a><a href="tencent://Message/?Uin=109629307&amp;websiteName=q-zone.qq.com&amp;Menu=yes"><img border="0" alt="点击这里给我发消息" src="pa-p=1-109629307-16.gif" tppabs="http://wpa.qq.com/pa?p=1:109629307:16" /></a></li>
+
+		  <li style=" font-weight:bold">广州东佳人事网</li>
+		  <li>电话:020-28963479/22093611</li>
+		  <li>手机:13632403496</li>
+		  <li>QQ:109629307</li>
+		  <li>邮箱:109629307@qq.com</li>
+		  <li>地址:广州市天河区中山大道西787号</li>
+		  <li>裕丰商业中心210室</li>
+		</ul>
+  </div>
+</div>
+
+    <div id="right">
+      <div style="margin-top:5px;background:url(images/xiu.jpg) no-repeat; width:741px; height:32px;">
+      <table width="211" height="29" border="0">
+        <tr>
+          <td align="center"><font color="#FFFFFF" style="letter-spacing:5px;font-weight:bold; font-size:14px;">
+		  行业资讯
+		  
+		  </font></td>
+        </tr>
+      </table>
+    </div>
+		<div id="i_product">
+		  <div id="i_product_content" style="line-height:22px;">
+		    
+			<P>&nbsp;</P>
+<P align=center><FONT size=4>广州市人口准人基本条件</FONT></P>
+<P>一、新生婴儿登记类准入人员的人口准入基本条件。 <BR><BR>同时具备下列2项条件的新生婴儿，准予登记本市农业户口或非农业户口(即城镇居民户口，下同)： <BR><BR>(一)父母亲在本市有合法住所。 <BR><BR>(二)符合下列条件之一： <BR><BR>1．属计划内新出生的，父母亲双方或一方常住户口在本市。 <BR><BR>2．属计划外新出生的，父母亲双方或母亲一方常住户口在本市，父母亲已接受计划外生育处理。 <BR><BR>二、被收养人登记类准入人员的人口准入基本条件。 <BR><BR>同时具备下列3项条件的被收养人，准予登记、迁入本市农业户口或非农业户口： <BR><BR>(一)收养人在本市有合法住所。 <BR><BR>(二)收养人有本市常住户口。 <BR><BR>(三)取得县级以上民政部门核发的收养登记证。 <BR><BR>三、恢复户口类准入人员的人口准入基本条件。 <BR><BR>同时具备下列3项条件的恢复户口人员，准予恢复本市农业户口或非农业户口： <BR><BR>(一)在本市有合法住所。 <BR><BR>(二)原具有本市常住户口。 <BR><BR>(三)符合下列条件之一： <BR><BR>1．参军复退回本市。 <BR><BR>2．到外地就读大中专、技工学校毕业、退学、休学回本市。 <BR><BR>3。劳改释放、解除劳教或少管后回本市。 <BR><BR>4．出国、出境后回本市。 <BR><BR>5．归国华侨、港澳台同胞回本市定居。 <BR><BR>6．持户口迁移证件或遗失户口迁移证件在迁入地未入户回本市。 <BR><BR>7．从本文件实施之日起到国内外其他地方就业、学习、生活后回本市。 <BR><BR>四、人才引进类准入人员的人口准入基本条件。 <BR><BR>(一)同时具备下列3项条件的人才，准予人才本人及其配偶、未成年子女一次性或分批迁入本市非农业户口(其未成年子女入户实行随父随母自愿的原则)： <BR><BR>1．在本市有合法住所。 <BR><BR>2．来本市创业或被本市行政区域内机关、群众团体、事业单位，以及社会保险纳入我市行政区域内劳动保障部门管理的依法登记的企业、非企业单位和外地单位驻穗办事机构(以下简称单位)正式录(聘)用(包括调任、转任，下同)或招用，按规定办理录(聘)用手续或依法签订劳动合同和办理缴纳社会保险的手续。 <BR><BR>3．符合下列条件之一： <BR><BR>(1)中国科学院、工程院院士以及国内外学术、科学技术带头人。 <BR><BR>(2)拥有属于自主知识产权并达到国内外先进水平的专利、发明或者专有技术的人才。 <BR><BR>(3)享受国务院特殊津贴专家、省(部)级有突出贡献中青年专家。 <BR><BR>(4)具有正高级专业技术资格的年龄在50周岁以下、具有副高级专业技术资格的年龄在40周岁以下或具有高级技师职业资格的年龄在40周岁以下的人才。 <BR><BR>(5)具有国民教育序列研究生学历并有博士学位或出国留学并在国外取得博士学位的年龄在45周岁以下的人才。 <BR><BR>(6)具有国民教育序列研究生学历并有硕士学位和中级专业技术资格、执业资格(不包括助理级执业资格，下同)或在国外取得硕士学位的年龄在40周岁以下的人才。 <BR><BR>(7)经批准调任、转任到机关、群众团体、事业单位担任副处级以上领导职务或正处级以上非领导职务的干部。 <BR><BR>(8)省、市政府文件明确规定引进的其他高级人才。 <BR><BR>(二)同时具备下列4项条件的人才，属于未婚或已婚配偶具有本市常住户口的，准予人才本人迁入本市非农业户口；已婚的夫妻双方均是非本市常住户口的人才，夫妻双方均同时具备下列4项条件的，准予夫妻双方及其未成年子女迁入本市非农业户口： <BR><BR>1．在本市有合法住所。 <BR><BR>2．来本市创业或被本市行政区域内单位正式录(聘)用或招用，按规定办理了录(聘)用手续或依法签订了劳动合同和办理了缴纳社会保险的手续。 <BR><BR>3．符合下列条件之一： <BR><BR>(1)具有普通高等教育本科以上学历并有学士以上学位的年龄在35周岁以下的人才。 <BR><BR>(2)具有普通高等教育大专以上学历，同时具有相关专业的中级专业技术资格、执业资格的年龄在35周岁以下的人才。 <BR><BR>(3)具有中等职业教育以上学历或普通高中以上学历并有技师职业资格的年龄在35周岁以下的技能型人才。 <BR><BR>(4)具有中等职业教育以上学历或普通高中以上学历并有高级职业资格的年龄在35周岁以下的技能型人才。 <BR><BR>4．所学专业、所毕业学校、所拥有的专业技术资格、执业资格、职业资格、所从事的工种(岗位)等符合市公布实施的人口准入补充条件规定的目录。 <BR><BR>五、政策性安置调配类准入人员的人口准入基本条件。 <BR><BR>(一)在本市有合法住所，符合省、市政府关于军队转业干部来本市安置政策规定的军队转业干部，准予其本人及配偶、未成年子女登记、迁入本市非农业户口。 <BR><BR>(二)在本市有合法住所，符合省、市政府关于军队复员干部、退伍义务兵和转业士官来本市安置政策规定的复员干部、退伍义务兵和转业士官，准予其本人登记本市非农业户口。 <BR><BR>(三)在本市有合法住所，符合省、市政府关于军队干部家属随军来本市政策规定的随军家属，准予其迁入本市非农业户口。 <BR><BR>(四)在本市有合法住所，符合省、市政府关于军队离退休干部移交本市管理政策规定的军队离退休干部，准予其本人及随迁家属登记、迁入本市非农业户口。 <BR><BR>(五)省、市政府文件明确规定由本市安置的其他人员，准予登记、迁入本市非农业户口。 <BR><BR>六、家庭团聚类准入人员的人口准入基本条件。 <BR><BR>(一)同时具备下列3项条件的投靠配偶人员，准予其迁入本市非农业户口： <BR><BR>1．配偶在本市有合法住所。 <BR><BR>2．配偶具有本市非农业户口。 <BR><BR>3．符合下列条件之一： <BR><BR>(1)配偶具有高级专业技术资格、高级技师资格、研究生学历并有博士学位、研究生学历并有硕士学位和中级专业技术资格、执业资格。 <BR><BR>(2)配偶在本市3年内累计缴纳个人所得税达到10万元。 <BR><BR>(3)配偶具有研究生学历、硕士学位、大学本科学历并有学士学位，大专以上学历并有中级专业技术资格、执业资格或具有高级职业资格、技师资格，夫妻双方均达到晚婚年龄后的结婚年限达到市公布实施的人口准入补充条件规定的可给予入户的年限(最低不低于2年)。 <BR><BR>(4)配偶领有市残联核发的《广州市残疾证》或区以上民政部门核发的《广州市低收入困难家庭证》或市总工会核发的《广州市特困职工证》，夫妻双方均达到晚婚年龄后的结婚年限达到市公布实施的人口准入补充条件规定的可给予入户的年限(最低不低于2年)。 <BR><BR>(5)夫妻双方男方年龄超过60周岁、女方年龄超过55周岁的。 <BR><BR>(6)男方年龄超过60周岁或女方年龄超过55周岁，另一方年龄超过30周岁，结婚年限达到市公布实施的人口准入补充条件规定的可给予入户的年限(最低不低于1年)。 <BR><BR>(7)对不符合本条第(1)至第(6)款条件的其他投靠配偶人员，夫妻双方均达到晚婚年龄后的结婚年限达到市公布实施的人口准入补充条件规定的可给予入户的年限(最低不低于5年)。 <BR><BR>(二)母亲常住户口在市外，父亲常住户口在本市的计划外出生的投靠父亲的未成年小孩，其父母亲均达到晚婚年龄后的结婚年限达到市公布实施的人口准入补充条件规定的可给予入户的年限(最低不低于5年)的，准予其迁入本市农业户口或非农业户口。 <BR><BR>(三)符合下列条件之一的投靠子女人员，准予其迁入本市农业户口或非农业户口： <BR><BR>1.男性年龄超过60周岁、女性年龄超过55周岁，夫妻有一方原具有本市常住户口或是鳏寡人员，来投靠具有本市常住户口的子女的。 <BR><BR>2．男性年龄超过60周岁、女性年龄超过55周岁的非鳏寡人员，身边无子女，所有子女的常住户口均在本市，在本市连续居住的年限达到市公布实施的人口准入补充条件规定的可给予入户的连续居住年限(最低不低于2年)。 <BR><BR>(四)属于解决历史遗留的夫妻分居和未成年小孩随父入户的人员，其解决夫妻分居和未成年小孩随父入户的条件达到市公布实施的人口准入补充条件的,准予其迁入本市非农业户口。 <BR><BR>七、纳税类准入人员的人口准入基本条件。 <BR><BR>同时具备下列3项条件的非本市常住户口人员，准予其本人及配偶、未成年子女迁入本市非农业户口： <BR><BR>(一)在本市有合法住所。 <BR><BR>(二)在本市连续居住、就业(创业)和缴纳社会保险的年限达到3年。 <BR><BR>(三)在本市3年内个人累计缴纳个人所得税达到10万元。 <BR><BR>八、农迁农类准入人员的人口准入基本条件。 <BR><BR>同时具备下列2项条件的投靠配偶的农业户口人员，准予其迁入本市农业户口： <BR><BR>(一)配偶在本市有合法住所。 <BR><BR>(二)配偶具有本市农业户口。 <BR><BR>九、补充吸收类准入人员的人口准入基本条件。 <BR><BR>同时具备下列3项条件的有关人员，准予登记、迁入本市非农业户口或农业户口： <BR><BR>(一)在本市有合法住所。 <BR><BR>(二)符合下列条件之一： <BR><BR>1．具有中等职业教育以上学历或普通高中以上学历，并有中级职业资格，在本市就业和缴纳社会保险达到5年，年龄在30周岁以下，所拥有的职业资格、所从事的工种(岗位)等符合市公布实施的人口准入补充条件规定的可给予申请入户的有关目录，有机关、事业单位正式录(聘)用或企业招用签订了劳动合同并办理了缴纳社会保险手续的未婚的特殊技能人员。 <BR><BR>2．具有普通高等教育大专以上学历，在国家机关从事特殊性、艰苦性、危险性、保密性强的工作的特殊岗位从业人员。 <BR><BR>3．被评为“广州市十佳外来青年员工”的人员。 <BR><BR>4．符合本市投亲靠友来本市入户和落实政策回本市入户政策规定的人员。 <BR><BR>5．其他有特殊困难需要来本市的人员或本市经济社会发展需要的特殊技能人员和特殊专业技术人员。 <BR><BR>(三)有本市年度人口计划指标。 <BR><BR>十、办理不可市内迁移的非农业集体户口类准入人员的人口准入基本条件。 <BR><BR>(一)对同时具备下列4项条件的学生，准予其迁入学校的学生非农业集体户口： <BR><BR>1．在本市有合法住所。 <BR><BR>2．在本市的普通高等学校、高等职业技术学院、普通中等专业学校和技工学校招收的属于全日制普通学历教育的非广东省常住户口学生。 <BR><BR>3．有本市市级以上计划部门的招生计划。 <BR><BR>4．经本市市级以上招生部门办理录取手续。 <BR><BR>(二)对同时具备下列3项条件的驻穗办人员，准予其本人迁入驻穗办非农业集体户口： <BR><BR>1．在本市有合法住所。 <BR><BR>2．驻穗办正式工作人员。 <BR><BR>3．有市政府批准的驻穗办工作人员入户计划指标。 <BR><BR>十一、本市农业户口人员就地“农转非”，按我市有关就地“农转非”政策执行。 <BR><BR>已有我市蓝印户口的人员，其户口转办为本市非农业户口，仍按原蓝印户口管理规定执行。 <BR><BR>对符合原侨汇购房入户规定，并有年度人口机械增长计划指标的拟入户人员，应在规定的时间内到市公安部门办理入户手续。 <BR><BR>十二、违反计划生育政策的人员，其解决夫妻分居的结婚年限相应延长5年。 <BR><BR>十三、本文件所规定的合法住所，包括本人或夫妻共同拥有房地产权、已领取或暂未领取市国土房管部门核发的《广州市房地产证》或《房地产权证》的固定住所，合法承租的有一定期限的住所，政府或用人单位(学校)安排的供其居住的住所，直系亲属拥有房产权的供其居住的本市房屋。 <BR><BR>本文件所规定的具有本市常住户口人员，包括具有本市农业户口、全民农业户口、自理口粮户口、地方城镇居民户口和非农业户口人员，具有不可市内迁移的本市驻穗办非农业集体户口的已退休人员以及在本市参加了房改拥有房改房人员，侨汇购房入户人员，不包括具有本市的不可办理市内迁移的学生非农业集体户口的在校学生、毕业后暂未将户口从学生非农业集体户口中迁离的人员、驻穗办非农业集体户口的驻穗办工作人员。 <BR><BR>本文件所规定来本市创业是指在本市进行工商和税务注册登记的企业担任法定代表人、投资者或合伙人。 <BR><BR>本文件所规定的“……以上学历(学位、职务)”均含本学历(学位、职务)，“……市级以上”含市级，“……周岁以下”含本周岁。 <BR><BR>十四、在本市连续居住、就业、缴纳社会保险和纳税等的年限。有合法证明材料的，在本文件实施之前的年限予以认可。缴纳社会保险的年限，暂不包括缴纳医疗保险年限。</P>
+<P>本站提供之信息仅供参考，不作为法律依据，确切内容以正式文件及实际业务为准。</P>
+<P><BR></P>
+		  </div>
+		</div>
+         <div><img src="index_20.jpg" tppabs="http://www.djhr168.com/images/index_20.jpg" width="741" height="11" alt=""></div>
+  </div>	
+</div>
+  
+    
+
+
+<TABLE style=" margin-top:8px;"; cellSpacing=0 cellPadding=0 width=1000 align=center border=0>
+  <TR>
+    <TD>
+<DIV id=div1 style="OVERFLOW: hidden; WIDTH: 100%; COLOR: #ffffff">
+      <TABLE cellSpacing=0 cellPadding=0 align=left border=0 cellspace="0">
+        <TR>
+          <TD id=td1 vAlign=top>
+		  <table width="1710" height="50"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+			
+              <td width="171"><a href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryGraduateApply.aspx" target="_blank"><img src="20111117113941254.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117113941254.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.hrssgz.gov.cn/vsgzpiapp01/GZPI/Gateway/QueryPersonIntroduce.aspx" target="_blank"><img src="20111117114212262.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117114212262.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.ahelp.cn/" target="_blank"><img src="20120515094809140.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515094809140.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.mohrss.gov.cn/" target="_blank"><img src="20120515095246546.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515095246546.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.gdrst.gov.cn/" target="_blank"><img src="20120515095550448.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515095550448.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.chsi.com.cn/xlcx/" target="_blank"><img src="20111117114430973.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20111117114430973.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://gzsc.gzlm.net/" target="_blank"><img src="20120515100612872.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515100612872.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://gzcsh.gzmz.gov.cn/" target="_blank"><img src="20120515134020340.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515134020340.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.cjob.gov.cn/cjob/f_index.do" target="_blank"><img src="20120515100857942.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515100857942.jpg" height="46" border="0"></a></td>
+			
+              <td width="171"><a href="http://www.newjobs.com.cn/jyzd/index.html" target="_blank"><img src="20120515101023864.jpg" tppabs="http://www.djhr168.com/UploadFile/Links/20120515101023864.jpg" height="46" border="0"></a></td>
+			
+            </tr>
+          </table>
+		  </TD>
+<TD id=td2 vAlign=top> </TD></TR></TABLE>
+</DIV>
+<SCRIPT language="javascript">
+var n=5
+//数值越大图片滚动的越快
+td2.innerHTML=td1.innerHTML
+var Mycheck;
+function move()
+{
+	if(td2.offsetWidth-div1.scrollLeft<=0)
+		div1.scrollLeft-=td1.offsetWidth
+	else
+	{div1.scrollLeft++}
+    Mycheck=setTimeout(move,n)
+}
+div1.onmouseover=function() {clearTimeout(Mycheck)}
+div1.onmouseout=function() {Mycheck=setTimeout(move,n)}
+move();
+</SCRIPT>
+</TD>
+</TR></TABLE>
+<div id="foot">
+  <div style="height:6px; overflow:hidden;background-color:#535353"></div>
+    <ul>
+	  <li></li>
+	  <li>版权所有2010-2015 广州东佳企业管理咨询有限公司 备案号:粤ICP备11095050号 技术支持:<a href="http://www.oyky.net/" target="_blank">广州网站建设</a></li>
+	</ul>
+  </div>
+</body>
+</html>
