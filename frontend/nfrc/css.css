@@ -18,8 +18,8 @@ a{ text-decoration:none; color:#000000;}
 
 
 #header #nav ul li{
- float:left; line-height:33px; width:83px; font-size:14px; 
- text-align:center; background:url("nav1.jpg")/*tpa=http://www.djhr168.com/images/nav1.jpg*/ 0px center no-repeat;}
+ float:left; line-height:33px; width:135px; font-size:14px; 
+ text-align:center; background:url("nav1.jpg")/*tpa=http://www.djhr168.com/images/nav1.jpg*/ 130px center no-repeat;}
 
 #header #nav ul li a{
  color:#FFFFFF; font-weight:bold;}
