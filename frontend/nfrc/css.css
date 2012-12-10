@@ -10,7 +10,7 @@ a{ text-decoration:none; color:#000000;}
 
 
 #header{
- width:100%; height:330px; margin:auto; background:url("background_2011.gif")/*tpa=http://www.djhr168.com/images/background_2011.gif*/ 0px 100px repeat-x}
+ width:100%; margin:auto; background:url("background_2011.gif")/*tpa=http://www.djhr168.com/images/background_2011.gif*/ 0px 518px repeat-x}
  
  
 #header #nav{
@@ -203,3 +203,6 @@ overflow:hidden;
 
 .product{
  width:160px; height:180px; margin-top:12px; margin-left:12px; float:left}
+
+ .links tr td{padding: 0 15px;}
+ .links tr td:first-child{padding-left:50px;}
